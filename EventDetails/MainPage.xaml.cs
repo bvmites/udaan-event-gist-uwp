@@ -39,7 +39,7 @@ namespace EventDetails
                 user.Username = TextBox1.Text;
                 user.Password = PasswordBox1.Password;
 
-                string uri = "http://demo1164694.mockable.io/login";
+                string uri = "http://demo0530082.mockable.io/login";
                 RootObject response = await Verify.PostAsJsonAsync(uri, user);
 
                 if(response.status != false)

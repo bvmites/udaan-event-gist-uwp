@@ -224,3 +224,13 @@ C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\qualifiers.t
 C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\EventDetails.csprojResolveAssemblyReference.cache
+C:\Users\darsh\source\repos\EventDetails\EventDetails\bin\x86\Debug\Register.xbf
+C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\Register.g.i.cs
+C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\Register.g.cs
+C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\Register.xaml
+C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\Register.xbf
+C:\Users\darsh\source\repos\EventDetails\EventDetails\bin\x86\Debug\BasicDetails.xbf
+C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\BasicDetails.g.i.cs
+C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\BasicDetails.g.cs
+C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\BasicDetails.xaml
+C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\BasicDetails.xbf

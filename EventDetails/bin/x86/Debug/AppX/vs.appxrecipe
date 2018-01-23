@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\darsh\source\repos\EventDetails\EventDetails\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>ADC29CC5ECEC88A106CC88CDB258FB6D0CF09270464791A4B910E800EC30DA70</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>924DE28D1B817DF86DEBF570B304F88AC1147C246D91CF55826A24E6F5B15718</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>cd723863-7491-4df9-90f6-20542a5d05ff_1.0.0.0_x86__mh2jd6520dhr4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>cd723863-7491-4df9-90f6-20542a5d05ff_mh2jd6520dhr4!App</RegisteredUserModeAppID>
     <RegisteredPackageID>cd723863-7491-4df9-90f6-20542a5d05ff</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\darsh\source\repos\EventDetails\EventDetails\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-22T11:36:25.385</Modified>
+      <Modified>2018-01-23T11:47:31.292</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\EventDetails\EventDetails\bin\x86\Debug\EventDetails.exe">
       <PackagePath>entrypoint\EventDetails.exe</PackagePath>
-      <Modified>2018-01-22T11:36:19.208</Modified>
+      <Modified>2018-01-23T11:47:25.828</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -567,7 +567,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\EventDetails\EventDetails\bin\x86\Debug\EventDetails.xr.xml">
       <PackagePath>EventDetails.xr.xml</PackagePath>
-      <Modified>2018-01-22T11:01:42.937</Modified>
+      <Modified>2018-01-23T11:47:24.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -576,11 +576,11 @@
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\EventDetails\EventDetails\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-22T11:36:23.822</Modified>
+      <Modified>2018-01-23T11:47:30.244</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\EventDetails\EventDetails\bin\x86\Debug\Core\EventDetails.exe">
       <PackagePath>EventDetails.exe</PackagePath>
-      <Modified>2018-01-22T11:36:25.368</Modified>
+      <Modified>2018-01-23T11:47:31.256</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

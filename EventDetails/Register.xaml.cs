@@ -13,13 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace EventDetails
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class Register : Page
     {
         public string token;
@@ -32,6 +27,18 @@ namespace EventDetails
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             token = e.Parameter.ToString();
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var combo = (ComboBox)sender;
+            var item = (ComboBoxItem)combo.SelectedItem;
+            if (item.Content.ToString() == "Technical")
+            {
+                Department.IsEnabled = true;
+            }
+            else
+                Department.IsEnabled = false;
         }
     }
 }
