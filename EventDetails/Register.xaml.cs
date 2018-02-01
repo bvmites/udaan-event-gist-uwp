@@ -46,7 +46,7 @@ namespace EventDetails
 
         public int r_Count = 2;
 
-        private void addRound_Click(object sender, RoutedEventArgs e)
+        public void addRound_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -71,7 +71,7 @@ namespace EventDetails
             }
         }
 
-        private void removeRound_Click(object sender, RoutedEventArgs e)
+        public void removeRound_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -91,7 +91,7 @@ namespace EventDetails
 
         public int m_Count = 2;
 
-        private void Add_Manager(object sender, RoutedEventArgs e)
+        public void Add_Manager(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -107,7 +107,7 @@ namespace EventDetails
                     Rounds.UpdateLayout();
 
                     TextBox t = new TextBox();
-                    t.Name = "Name" + m_Count;
+                    t.Name = "ManagerName" + m_Count;
                     t.PlaceholderText = "Name";
                     t.Width = 350;
                     t.Margin = new Thickness(0, 10, 0, 0);
@@ -132,24 +132,25 @@ namespace EventDetails
             }
         }
 
-        private void Department_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        public void Department_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var combo = (ComboBox)sender;
             var item = (ComboBoxItem)combo.SelectedItem;
             dept = item.Content.ToString();
         }
 
-        private void Remove_Manager(object sender, RoutedEventArgs e)
+        public void Remove_Manager(object sender, RoutedEventArgs e)
         {
             try
             {
                 if (m_Count < 3) throw new Exception();
                 --m_Count;
                 TextBlock tb = (TextBlock)this.Manager.FindName("Manager" + (m_Count));
+                
                 this.Manager.Children.Remove(tb);
                 Manager.UpdateLayout();
 
-                TextBox t = (TextBox)this.Manager.FindName("Name" + (m_Count));
+                TextBox t = (TextBox)this.Manager.FindName("ManagerName" + (m_Count));
                 this.Manager.Children.Remove(t);
                 Manager.UpdateLayout();
 
@@ -166,12 +167,14 @@ namespace EventDetails
             }
         }
 
-        private async void submit_Click(object sender, RoutedEventArgs e)
+        public async void submit_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 Details d = new Details();
 
+                d.Token = token;
+                d.EventName = TextBox1.Text.ToString();
                 d.Type = type;
 
                 if (Department.IsEnabled == true)
@@ -179,13 +182,11 @@ namespace EventDetails
                 else
                     d.Department = " ";
 
-                d.EventName = TextBox1.Text.ToString();
                 d.Tagline = TextBox2.Text.ToString();
                 d.Description = TextBox3.Text.ToString();
                 d.NumOfParticipants = Convert.ToInt32(TextBox4.Text);
                 d.Fees = Convert.ToInt32(TextBox5.Text);
-                d.Token = token;
-
+                
                 ArrayList names = new ArrayList();
                 ArrayList phone = new ArrayList();
                 ArrayList round = new ArrayList();
@@ -193,28 +194,28 @@ namespace EventDetails
                 names.Add(TextBox6.Text.ToString());
                 phone.Add(TextBox7.Text.ToString());
                 round.Add(TextBox8.Text.ToString());
-
+                
                 while (m_Count - 1 > 1)
                 {
-                    TextBox n = (TextBox)this.Manager.FindName("Name" + m_Count);
-                    TextBox p = (TextBox)this.Manager.FindName("Number" + m_Count);
-                
+                    m_Count--;
+                    TextBox n = (TextBox)this.Manager.FindName("ManagerName" + (m_Count));
+                    TextBox p = (TextBox)this.Manager.FindName("Number" + (m_Count));
+
                     names.Add(n.Text.ToString());
                     phone.Add(p.Text.ToString());
-                    m_Count--;
                 }
 
                 while (r_Count - 1 > 1)
                 {
-                    TextBox r = (TextBox)this.Rounds.FindName("Round" + r_Count);
-                
-                    round.Add(r.Text.ToString());
                     r_Count--;
+                    TextBox r = (TextBox)this.Rounds.FindName("Round" + (r_Count));
+                
+                    round.Add(r.Text.ToString());                    
                 }
 
                 if (names.Count > 0)
                 {
-                    d.Name = (string[])names.ToArray(typeof(string));
+                    d.ManagerName = (string[])names.ToArray(typeof(string));
                     d.Phone = (string[])phone.ToArray(typeof(string));
                 }
                 if (round.Count > 0)
