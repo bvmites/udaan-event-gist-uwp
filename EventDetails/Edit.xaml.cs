@@ -16,18 +16,90 @@ using Windows.UI.Xaml.Navigation;
 
 namespace EventDetails
 {
-    public sealed partial class Register : Page
+    public sealed partial class Edit : Page
     {
-        public string token, type, dept;
+        public EditObject obj;
+        public string type, token, dept;
+        public int r_Count, m_Count, i, j;
 
-        public Register()
+        public Edit()
         {
             this.InitializeComponent();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            token = e.Parameter.ToString();
+            obj = (EditObject)e.Parameter;
+            token = obj.Token.ToString();
+            Type.SelectedValuePath = obj.Type.ToString();
+            if(obj.Type == "Technical")
+            {
+                Department.Visibility = Visibility.Visible;
+                Department.SelectedValuePath = obj.Department.ToString();
+            }
+            TextBox1.Text = obj.EventName.ToString();
+            TextBox2.Text = obj.Tagline.ToString();
+            TextBox3.Text = obj.Description.ToString();
+            TextBox4.Text = obj.NumOfParticipants.ToString();
+            TextBox5.Text = obj.Fees.ToString();
+            TextBox6.Text = obj.ManagerName[0].ToString();
+            TextBox7.Text = obj.Phone[0].ToString();
+            TextBox8.Text = obj.Round[0].ToString();
+            m_Count = obj.ManagerName.Count + 1;
+            r_Count = obj.Round.Count + 1;
+
+            j = 1;
+            i = 2;
+            while(i < m_Count)
+            {
+                Warning1.Visibility = Visibility.Collapsed;
+
+                TextBlock tb = new TextBlock();
+                tb.Name = "Manager" + i;
+                tb.Text = "Manager " + i;
+                tb.Margin = new Thickness(0, 10, 0, 0);
+                Manager.Children.Add(tb);
+                Rounds.UpdateLayout();
+
+                TextBox t = new TextBox();
+                t.Name = "ManagerName" + i;
+                t.PlaceholderText = "Name";
+                t.Text = obj.ManagerName[j].ToString();
+                t.Width = 350;
+                t.Margin = new Thickness(0, 10, 0, 0);
+                Manager.Children.Add(t);
+                Rounds.UpdateLayout();
+
+                TextBox n = new TextBox();
+                n.Name = "Number" + i;
+                n.PlaceholderText = "Phone Number";
+                n.Text = obj.Phone[j].ToString();
+                n.Width = 350;
+                n.Margin = new Thickness(0, 10, 0, 0);
+                Manager.Children.Add(n);
+                Rounds.UpdateLayout();
+
+                j++;
+                i++;
+            }
+
+            j = 1;
+            i = 2;
+            while(i < r_Count)
+            {
+                Warning2.Visibility = Visibility.Collapsed;
+                TextBox t = new TextBox();
+                t.Name = "Round" + i;
+                t.PlaceholderText = "Round " + i;
+                t.Text = obj.Round[j].ToString();
+                t.Width = 350;
+                t.Height = 100;
+                t.Margin = new Thickness(0, 10, 0, 0);
+                Rounds.Children.Add(t);
+                Rounds.UpdateLayout();
+                j++;
+                i++;
+            }
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -43,53 +115,6 @@ namespace EventDetails
             else
                 Department.IsEnabled = false;
         }
-
-        public int r_Count = 2;
-
-        public void AddRound_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                if (r_Count > 3) throw new Exception();
-                {
-                    Warning2.Visibility = Visibility.Collapsed;
-                    TextBox t = new TextBox();
-                    t.Name = "Round" + r_Count;
-                    t.PlaceholderText = "Round " + r_Count;
-                    t.Width = 350;
-                    t.Height = 100;
-                    t.Margin = new Thickness(0, 10, 0, 0);
-                    Rounds.Children.Add(t);
-                    Rounds.UpdateLayout();
-                    r_Count++;
-                }
-            }
-            catch(Exception)
-            {
-                Warning2.Text = "Can not add more than 3 rounds";
-                Warning2.Visibility = Visibility.Visible;
-            }
-        }
-
-        public void RemoveRound_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                if (r_Count < 3) throw new Exception();
-                --r_Count;
-                TextBox t = (TextBox)this.Rounds.FindName("Round" + (r_Count));
-                this.Rounds.Children.Remove(t);
-                Rounds.UpdateLayout();
-                Warning2.Visibility = Visibility.Collapsed;
-            }
-            catch(Exception)
-            {
-                Warning2.Text = "Atleast one round is required";
-                Warning2.Visibility = Visibility.Visible;
-            }
-        }
-
-        public int m_Count = 2;
 
         public void Add_Manager(object sender, RoutedEventArgs e)
         {
@@ -125,7 +150,7 @@ namespace EventDetails
                     m_Count++;
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 Warning1.Text = "Can not add more than 3 managers";
                 Warning1.Visibility = Visibility.Visible;
@@ -167,6 +192,49 @@ namespace EventDetails
             dept = item.Content.ToString();
         }
 
+        public void AddRound_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (r_Count > 3) throw new Exception();
+                {
+                    Warning2.Visibility = Visibility.Collapsed;
+                    TextBox t = new TextBox();
+                    t.Name = "Round" + r_Count;
+                    t.PlaceholderText = "Round " + r_Count;
+                    t.Width = 350;
+                    t.Height = 100;
+                    t.Margin = new Thickness(0, 10, 0, 0);
+                    Rounds.Children.Add(t);
+                    Rounds.UpdateLayout();
+                    r_Count++;
+                }
+            }
+            catch (Exception)
+            {
+                Warning2.Text = "Can not add more than 3 rounds";
+                Warning2.Visibility = Visibility.Visible;
+            }
+        }
+
+        public void RemoveRound_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (r_Count < 3) throw new Exception();
+                --r_Count;
+                TextBox t = (TextBox)this.Rounds.FindName("Round" + (r_Count));
+                this.Rounds.Children.Remove(t);
+                Rounds.UpdateLayout();
+                Warning2.Visibility = Visibility.Collapsed;
+            }
+            catch (Exception)
+            {
+                Warning2.Text = "Atleast one round is required";
+                Warning2.Visibility = Visibility.Visible;
+            }
+        }        
+
         public async void submit_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -186,7 +254,7 @@ namespace EventDetails
                 d.Description = TextBox3.Text.ToString();
                 d.NumOfParticipants = Convert.ToInt32(TextBox4.Text);
                 d.Fees = Convert.ToInt32(TextBox5.Text);
-                
+
                 ArrayList names = new ArrayList();
                 ArrayList phone = new ArrayList();
                 ArrayList round = new ArrayList();
@@ -194,7 +262,7 @@ namespace EventDetails
                 names.Add(TextBox6.Text.ToString());
                 phone.Add(TextBox7.Text.ToString());
                 round.Add(TextBox8.Text.ToString());
-                
+
                 while (m_Count - 1 > 1)
                 {
                     m_Count--;
@@ -209,8 +277,8 @@ namespace EventDetails
                 {
                     r_Count--;
                     TextBox r = (TextBox)this.Rounds.FindName("Round" + (r_Count));
-                
-                    round.Add(r.Text.ToString());                    
+
+                    round.Add(r.Text.ToString());
                 }
 
                 if (names.Count > 0)
@@ -224,7 +292,7 @@ namespace EventDetails
                 string uri = "http://demo8763462.mockable.io/submit";
                 ResponseObject response = await Submit.PostAsJsonAsync(uri, d);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex);
             }

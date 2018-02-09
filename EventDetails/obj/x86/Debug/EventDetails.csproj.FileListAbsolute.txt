@@ -229,3 +229,13 @@ C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\Register.g.i
 C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\Register.g.cs
 C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\Register.xaml
 C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\Register.xbf
+C:\Users\darsh\source\repos\EventDetails\EventDetails\bin\x86\Debug\Choice.xbf
+C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\Choice.g.i.cs
+C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\Choice.g.cs
+C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\Choice.xaml
+C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\Choice.xbf
+C:\Users\darsh\source\repos\EventDetails\EventDetails\bin\x86\Debug\Edit.xbf
+C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\Edit.g.i.cs
+C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\Edit.g.cs
+C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\Edit.xaml
+C:\Users\darsh\source\repos\EventDetails\EventDetails\obj\x86\Debug\Edit.xbf

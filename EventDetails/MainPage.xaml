@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Background="{ThemeResource SystemControlAcrylicElementBrush}">
+    <StackPanel Background="{ThemeResource SystemControlAcrylicWindowMediumHighBrush}">
         <StackPanel Height="Auto" Margin="0,150,0,0">
             <TextBlock 
                 Text="Log In" 
@@ -63,8 +63,7 @@
                     Grid.Column="1" 
                     Grid.Row="4" 
                     HorizontalAlignment="Center" 
-                    Click="Button_Click" 
-                    Style="{StaticResource ButtonRevealStyle}"/>
+                    Click="Button_Click" />
                 <TextBlock
                     Grid.Column="1"
                     Grid.Row="5"
@@ -72,8 +71,7 @@
                     Visibility="Collapsed"
                     Text="Invalid Username or Password"
                     HorizontalAlignment="Center"
-                    Margin="0,30,0,0"
-                    />
+                    Margin="0,30,0,0" />
             </Grid>
         </StackPanel>
     </StackPanel>

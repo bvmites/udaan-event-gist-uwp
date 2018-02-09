@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="EventDetails.Register"
+    x:Class="EventDetails.Edit"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:EventDetails"
@@ -10,7 +10,7 @@
     <StackPanel Background="{ThemeResource SystemControlAcrylicWindowMediumHighBrush}">
         <StackPanel Height="Auto" Margin="0,50,0,0">
             <TextBlock 
-                Text="Register Event Details" 
+                Text="Edit Event Details" 
                 FontSize="48" 
                 HorizontalAlignment="Center" />
         </StackPanel>

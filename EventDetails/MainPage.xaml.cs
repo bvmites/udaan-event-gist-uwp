@@ -45,7 +45,7 @@ namespace EventDetails
                 if(response.status != false)
                 {
                     token = response.token;
-                    this.Frame.Navigate(typeof(Register), token);
+                    this.Frame.Navigate(typeof(Choice), token);
                 }
                 else
                 {
