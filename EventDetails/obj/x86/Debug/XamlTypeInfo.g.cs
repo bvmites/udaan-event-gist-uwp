@@ -132,21 +132,23 @@ namespace EventDetails.EventDetails_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[6];
+            _typeNameTable = new string[7];
             _typeNameTable[0] = "EventDetails.Choice";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "EventDetails.Edit";
-            _typeNameTable[4] = "EventDetails.MainPage";
-            _typeNameTable[5] = "EventDetails.Register";
+            _typeNameTable[4] = "EventDetails.EventSelect";
+            _typeNameTable[5] = "EventDetails.MainPage";
+            _typeNameTable[6] = "EventDetails.Register";
 
-            _typeTable = new global::System.Type[6];
+            _typeTable = new global::System.Type[7];
             _typeTable[0] = typeof(global::EventDetails.Choice);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::EventDetails.Edit);
-            _typeTable[4] = typeof(global::EventDetails.MainPage);
-            _typeTable[5] = typeof(global::EventDetails.Register);
+            _typeTable[4] = typeof(global::EventDetails.EventSelect);
+            _typeTable[5] = typeof(global::EventDetails.MainPage);
+            _typeTable[6] = typeof(global::EventDetails.Register);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -183,8 +185,9 @@ namespace EventDetails.EventDetails_XamlTypeInfo
 
         private object Activate_0_Choice() { return new global::EventDetails.Choice(); }
         private object Activate_3_Edit() { return new global::EventDetails.Edit(); }
-        private object Activate_4_MainPage() { return new global::EventDetails.MainPage(); }
-        private object Activate_5_Register() { return new global::EventDetails.Register(); }
+        private object Activate_4_EventSelect() { return new global::EventDetails.EventSelect(); }
+        private object Activate_5_MainPage() { return new global::EventDetails.MainPage(); }
+        private object Activate_6_Register() { return new global::EventDetails.Register(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -218,16 +221,23 @@ namespace EventDetails.EventDetails_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 4:   //  EventDetails.MainPage
+            case 4:   //  EventDetails.EventSelect
                 userType = new global::EventDetails.EventDetails_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_MainPage;
+                userType.Activator = Activate_4_EventSelect;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  EventDetails.Register
+            case 5:   //  EventDetails.MainPage
                 userType = new global::EventDetails.EventDetails_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_Register;
+                userType.Activator = Activate_5_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  EventDetails.Register
+                userType = new global::EventDetails.EventDetails_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_Register;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

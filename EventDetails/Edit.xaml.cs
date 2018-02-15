@@ -30,23 +30,25 @@ namespace EventDetails
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             obj = (EditObject)e.Parameter;
-            token = obj.Token.ToString();
-            Type.SelectedValuePath = obj.Type.ToString();
-            if(obj.Type == "Technical")
+            Type.SelectedValuePath = obj.type.ToString();
+            if(obj.type == "Technical")
             {
                 Department.Visibility = Visibility.Visible;
-                Department.SelectedValuePath = obj.Department.ToString();
+                Department.SelectedValuePath = obj.department.ToString();
             }
-            TextBox1.Text = obj.EventName.ToString();
-            TextBox2.Text = obj.Tagline.ToString();
-            TextBox3.Text = obj.Description.ToString();
-            TextBox4.Text = obj.NumOfParticipants.ToString();
-            TextBox5.Text = obj.Fees.ToString();
-            TextBox6.Text = obj.ManagerName[0].ToString();
-            TextBox7.Text = obj.Phone[0].ToString();
-            TextBox8.Text = obj.Round[0].ToString();
-            m_Count = obj.ManagerName.Count + 1;
-            r_Count = obj.Round.Count + 1;
+            TextBox1.Text = obj.name.ToString();
+            TextBox2.Text = obj.tagline.ToString();
+            TextBox3.Text = obj.description.ToString();
+            TextBox4.Text = obj.teamSize.ToString();
+            TextBox5.Text = obj.fees.ToString();
+
+            List<Manager> m1 = obj.managers.ToList();
+
+            TextBox6.Text = m1[0].name.ToString();
+            TextBox7.Text = m1[0].phone.ToString();
+            TextBox8.Text = obj.rounds[0].ToString();
+            m_Count = m1.Count() + 1;
+            r_Count = obj.rounds.Count + 1;
 
             j = 1;
             i = 2;
@@ -64,7 +66,7 @@ namespace EventDetails
                 TextBox t = new TextBox();
                 t.Name = "ManagerName" + i;
                 t.PlaceholderText = "Name";
-                t.Text = obj.ManagerName[j].ToString();
+                t.Text = m1[j].name.ToString();
                 t.Width = 350;
                 t.Margin = new Thickness(0, 10, 0, 0);
                 Manager.Children.Add(t);
@@ -73,7 +75,7 @@ namespace EventDetails
                 TextBox n = new TextBox();
                 n.Name = "Number" + i;
                 n.PlaceholderText = "Phone Number";
-                n.Text = obj.Phone[j].ToString();
+                n.Text = m1[j].phone.ToString();
                 n.Width = 350;
                 n.Margin = new Thickness(0, 10, 0, 0);
                 Manager.Children.Add(n);
@@ -91,7 +93,7 @@ namespace EventDetails
                 TextBox t = new TextBox();
                 t.Name = "Round" + i;
                 t.PlaceholderText = "Round " + i;
-                t.Text = obj.Round[j].ToString();
+                t.Text = obj.rounds[j].ToString();
                 t.Width = 350;
                 t.Height = 100;
                 t.Margin = new Thickness(0, 10, 0, 0);
@@ -239,21 +241,20 @@ namespace EventDetails
         {
             try
             {
-                Details d = new Details();
-
-                d.Token = token;
-                d.EventName = TextBox1.Text.ToString();
-                d.Type = type;
+                EditObject d = new EditObject();
+                d.name = TextBox1.Text.ToString();
+                d.type = type;
+                d.id = obj.id.ToString();
 
                 if (Department.IsEnabled == true)
-                    d.Department = dept;
+                    d.department = dept;
                 else
-                    d.Department = " ";
+                    d.department = " ";
 
-                d.Tagline = TextBox2.Text.ToString();
-                d.Description = TextBox3.Text.ToString();
-                d.NumOfParticipants = Convert.ToInt32(TextBox4.Text);
-                d.Fees = Convert.ToInt32(TextBox5.Text);
+                d.tagline = TextBox2.Text.ToString();
+                d.description = TextBox3.Text.ToString();
+                d.teamSize = Convert.ToInt32(TextBox4.Text);
+                d.fees = Convert.ToInt32(TextBox5.Text);
 
                 ArrayList names = new ArrayList();
                 ArrayList phone = new ArrayList();
@@ -281,15 +282,26 @@ namespace EventDetails
                     round.Add(r.Text.ToString());
                 }
 
-                if (names.Count > 0)
-                {
-                    d.ManagerName = (string[])names.ToArray(typeof(string));
-                    d.Phone = (string[])phone.ToArray(typeof(string));
-                }
-                if (round.Count > 0)
-                    d.Round = (string[])round.ToArray(typeof(string));
+                d.managers = new List<Manager>();
+                int k = 0, l = 0;
 
-                string uri = "http://demo8763462.mockable.io/submit";
+                while (k < names.Count)
+                {
+                    Manager m1 = new Manager();
+                    m1.name = names[k].ToString();
+                    m1.phone = phone[k].ToString();
+                    d.managers.Add(m1);
+                    k++;
+                }
+
+                d.rounds = new List<string>();
+                while (l < round.Count)
+                {
+                    d.rounds.Add(round[l].ToString());
+                    l++;
+                }
+
+                string uri = "http://editor.swagger.io/events";
                 ResponseObject response = await Submit.PostAsJsonAsync(uri, d);
             }
             catch (Exception ex)

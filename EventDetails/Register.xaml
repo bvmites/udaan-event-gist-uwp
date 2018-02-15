@@ -7,15 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Background="{ThemeResource SystemControlAcrylicWindowMediumHighBrush}">
+    <StackPanel ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Background="{ThemeResource SystemControlAcrylicWindowMediumHighBrush}">
         <StackPanel Height="Auto" Margin="0,50,0,0">
             <TextBlock 
                 Text="Register Event Details" 
                 FontSize="48" 
                 HorizontalAlignment="Center" />
         </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <StackPanel HorizontalAlignment="Left" Margin="40,20,0,0">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel HorizontalAlignment="Stretch" Margin="0,20,40,0">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -41,7 +41,7 @@
                                 Grid.Row="1"
                                 VerticalAlignment="Center"
                                 Margin="0,10,0,0"
-                                Width="170"
+                                HorizontalAlignment="Stretch"
                                 SelectionChanged="ComboBox_SelectionChanged">
                                 <ComboBoxItem Content="Technical" />
                                 <ComboBoxItem Content="Non-Technical" />
@@ -59,7 +59,7 @@
                                 Grid.Row="1"
                                 VerticalAlignment="Center"
                                 Margin="0,10,0,0"
-                                Width="170"
+                                HorizontalAlignment="Stretch"
                                 IsEnabled="False"
                                 SelectionChanged="Department_SelectionChanged">
                                 <ComboBoxItem Content="Computer/IT" />
@@ -81,9 +81,8 @@
                         x:Name="TextBox1" 
                         Margin="0,10,0,0" 
                         VerticalAlignment="Center" 
-                        HorizontalAlignment="Left"
-                        Grid.Row="3"
-                        Width="350" />
+                        HorizontalAlignment="Stretch"
+                        Grid.Row="3" />
                     <TextBlock 
                         Margin="0,20,0,0"
                         Text="Tag Line" 
@@ -95,9 +94,8 @@
                         x:Name="TextBox2" 
                         Margin="0,10,0,0" 
                         VerticalAlignment="Center" 
-                        HorizontalAlignment="Left"
-                        Grid.Row="5"
-                        Width="350" />
+                        HorizontalAlignment="Stretch"
+                        Grid.Row="5" />
                     <TextBlock 
                         Margin="0,20,0,0"
                         Text="Description" 
@@ -109,9 +107,8 @@
                         x:Name="TextBox3" 
                         Margin="0,10,0,0" 
                         VerticalAlignment="Center"
-                        HorizontalAlignment="Left"
+                        HorizontalAlignment="Stretch"
                         Grid.Row="7"
-                        Width="350"
                         Height="100"
                         TextWrapping="Wrap" />
                     <TextBlock 
@@ -125,13 +122,13 @@
                         x:Name="TextBox4" 
                         Margin="0,10,0,0" 
                         VerticalAlignment="Center"
-                        HorizontalAlignment="Left"
+                        HorizontalAlignment="Stretch"
                         Grid.Row="9"
                         Width="350"
                         TextWrapping="Wrap" />
                 </Grid>
             </StackPanel>
-            <StackPanel HorizontalAlignment="Center" Margin="80,20,0,0">
+            <StackPanel HorizontalAlignment="Stretch" Margin="40,20,40,0">
                 <StackPanel>
                     <Grid>
                         <Grid.RowDefinitions>
@@ -148,9 +145,8 @@
                             x:Name="TextBox5" 
                             Margin="0,10,0,0" 
                             VerticalAlignment="Center" 
-                            HorizontalAlignment="Left"
-                            Grid.Row="1"
-                            Width="350" />
+                            HorizontalAlignment="Stretch"
+                            Grid.Row="1" />
                     </Grid>
                 </StackPanel>
                 <TextBlock 
@@ -170,23 +166,37 @@
                         Margin="0,10,0,0"
                         PlaceholderText="Name"
                         VerticalAlignment="Center" 
-                        HorizontalAlignment="Left"
-                        Width="350" />
+                        HorizontalAlignment="Stretch" />
                     <TextBox
                         x:Name="TextBox7" 
                         PlaceholderText="Phone Number"
                         Margin="0,10,0,0" 
                         VerticalAlignment="Center" 
-                        HorizontalAlignment="Left"
-                        Width="350" />
+                        HorizontalAlignment="Stretch" />
                 </StackPanel>
                 <StackPanel Margin="0,20,0,0" Orientation="Horizontal">
-                    <Button Name="addManager" Margin="0,0,0,0" Width="150" Click="Add_Manager" >Add Manager</Button>
-                    <Button Name="removeManager" Margin="40,0,0,0" Width="150" Click="Remove_Manager" >Remove Manager</Button>
+                    <Button 
+                        Name="addManager" 
+                        Margin="0,20,20,0" 
+                        HorizontalAlignment="Stretch"
+                        Click="Add_Manager">
+                        Add Manager
+                    </Button>
+                    <Button 
+                        Name="removeManager" 
+                        Margin="20,20,0,0"
+                        HorizontalAlignment="Stretch"
+                        Click="Remove_Manager">
+                        Remove Manager
+                    </Button>
                 </StackPanel>
-                <TextBlock Name="Warning1" Margin="0,10,0,0" Visibility="Collapsed" Foreground="#FFEE1F1F" />
+                <TextBlock 
+                    Name="Warning1" 
+                    Margin="0,10,0,0" 
+                    Visibility="Collapsed" 
+                    Foreground="#FFEE1F1F" />
             </StackPanel>
-            <StackPanel Margin="80,20,0,0">
+            <StackPanel Margin="40,20,0,0" HorizontalAlignment="Stretch">
                 <StackPanel x:Name="Rounds">
                     <TextBlock 
                         Text="Round Details" 
@@ -197,17 +207,38 @@
                         x:Name="TextBox8" 
                         Margin="0,10,0,0" 
                         VerticalAlignment="Center" 
-                        HorizontalAlignment="Left"
-                        Width="350" 
+                        HorizontalAlignment="Stretch" 
                         Height="100"
                         PlaceholderText="Round 1"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
-                    <Button Name="AddRound" Margin="0,0,0,0" Width="150" Click="AddRound_Click">Add Round</Button>
-                    <Button Name="RemoveRound" Margin="40,0,0,0" Width="150" Click="RemoveRound_Click" Visibility="Visible">Remove Round</Button>
+                    <Button 
+                        Name="AddRound" 
+                        Margin="0,0,0,0" 
+                        Width="150" 
+                        Click="AddRound_Click">
+                        Add Round
+                    </Button>
+                    <Button 
+                        Name="RemoveRound" 
+                        Margin="40,0,0,0" 
+                        Width="150"
+                        Click="RemoveRound_Click" 
+                        Visibility="Visible">
+                        Remove Round
+                    </Button>
                 </StackPanel>
-                <TextBlock Name="Warning2" Margin="0,10,0,0" Visibility="Collapsed" Foreground="#FFEE1F1F"/>
-                <Button Margin="0,20,0,0" x:Name="submit" Content="Submit" HorizontalAlignment="Center" Click="submit_Click" />
+                <TextBlock 
+                    Name="Warning2" 
+                    Margin="0,10,0,0" 
+                    Visibility="Collapsed" 
+                    Foreground="#FFEE1F1F"/>
+                <Button 
+                    Margin="0,20,0,0" 
+                    x:Name="submit" 
+                    Content="Submit" 
+                    HorizontalAlignment="Center" 
+                    Click="submit_Click" />
             </StackPanel>
         </StackPanel>
     </StackPanel>

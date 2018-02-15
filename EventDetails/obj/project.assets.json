@@ -27990,11 +27990,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\darsh\\source\\repos\\EventDetails\\EventDetails\\EventDetails.csproj",
+      "projectUniqueName": "C:\\Users\\darsh\\source\\repos\\event-details-registration\\EventDetails\\EventDetails.csproj",
       "projectName": "EventDetails",
-      "projectPath": "C:\\Users\\darsh\\source\\repos\\EventDetails\\EventDetails\\EventDetails.csproj",
+      "projectPath": "C:\\Users\\darsh\\source\\repos\\event-details-registration\\EventDetails\\EventDetails.csproj",
       "packagesPath": "C:\\Users\\darsh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\darsh\\source\\repos\\EventDetails\\EventDetails\\obj\\",
+      "outputPath": "C:\\Users\\darsh\\source\\repos\\event-details-registration\\EventDetails\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [

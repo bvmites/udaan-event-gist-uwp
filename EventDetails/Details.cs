@@ -6,29 +6,22 @@ using System.Threading.Tasks;
 
 namespace EventDetails
 {
+    public class Managers
+    {
+        public string name { get; set; }
+        public string phone { get; set; }
+    }
+
     public class Details
     {
-        string eventName;
-        string token;
-        string type, department, tagline, description;
-        int numOfParticipants, fees;
-        
-
-        string[] managerName;
-        string[] phone;
-        string[] round;
-
-        public string Token { get => token; set => token = value; }
-        public string Type { get => type; set => type = value; }
-        public string Department { get => department; set => department = value; }
-        public string EventName { get => eventName; set => eventName = value; }
-        public string Tagline { get => tagline; set => tagline = value; }
-        public string Description { get => description; set => description = value; }
-        public int NumOfParticipants { get => numOfParticipants; set => numOfParticipants = value; }
-        public int Fees { get => fees; set => fees = value; }     
-
-        public string[] ManagerName { get => managerName; set => managerName = value; }
-        public string[] Phone { get => phone; set => phone = value; }
-        public string[] Round { get => round; set => round = value; }
+        public string name { get; set; }
+        public string type { get; set; }
+        public string department { get; set; }
+        public string tagline { get; set; }
+        public string description { get; set; }
+        public int teamSize { get; set; }
+        public int fees { get; set; }
+        public List<Managers> managers { get; set; }
+        public List<string> rounds { get; set; }
     }
 }

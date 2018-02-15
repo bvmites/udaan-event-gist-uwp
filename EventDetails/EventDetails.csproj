@@ -103,6 +103,9 @@
       <DependentUpon>Edit.xaml</DependentUpon>
     </Compile>
     <Compile Include="EditDetails.cs" />
+    <Compile Include="EventSelect.xaml.cs">
+      <DependentUpon>EventSelect.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -140,6 +143,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Edit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EventSelect.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

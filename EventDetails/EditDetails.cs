@@ -14,22 +14,37 @@ namespace EventDetails
 {
     public class EditDetails
     {
-        public async static Task<EditObject> GetDetails(string token)
+        public async static Task<List<EditObject>> GetDetails(string token)
         {
             var itemJson = JsonConvert.SerializeObject(token);
             var content = new StringContent(itemJson);
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
             var http = new HttpClient();
-            string url = "https://demo5369589.mockable.io/edit";
-            var response = await http.PostAsync(url, content);
+            string url = "http://demo5369589.mockable.io/edit";
+            var response = await http.PostAsync(url,content);
             var result = await response.Content.ReadAsStringAsync();
-            var serializer = new DataContractJsonSerializer(typeof(EditObject));
+            var serializer = new DataContractJsonSerializer(typeof(List<EditObject>));
 
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
-            var data = (EditObject)serializer.ReadObject(ms);
+            var data = (List<EditObject>)serializer.ReadObject(ms);
 
             return data;
+        }
+    }
+
+    [DataContract]
+    public class Manager
+    {
+        [DataMember]
+        public string name { get; set; }
+
+        [DataMember]
+        public string phone { get; set; }
+
+        public static implicit operator Manager(List<Manager> v)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -37,39 +52,33 @@ namespace EventDetails
     public class EditObject
     {
         [DataMember]
-        public string Token { get; set; }
+        public string id { get; set; }
 
         [DataMember]
-        public bool Status { get; set; }
+        public string name { get; set; }
 
         [DataMember]
-        public string Type { get; set; }
+        public string type { get; set; }
 
         [DataMember]
-        public string Department { get; set; }
+        public string department { get; set; }
 
         [DataMember]
-        public string EventName { get; set; }
+        public string tagline { get; set; }
 
         [DataMember]
-        public string Tagline { get; set; }
+        public string description { get; set; }
 
         [DataMember]
-        public string Description { get; set; }
+        public int teamSize { get; set; }
 
         [DataMember]
-        public int NumOfParticipants { get; set; }
+        public int fees { get; set; }
 
         [DataMember]
-        public int Fees { get; set; }
+        public List<Manager> managers { get; set; }
 
         [DataMember]
-        public List<string> ManagerName { get; set; }
-
-        [DataMember]
-        public List<string> Phone { get; set; }
-
-        [DataMember]
-        public List<string> Round { get; set; }
+        public List<string> rounds { get; set; }
     }
 }

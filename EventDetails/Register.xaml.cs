@@ -172,20 +172,18 @@ namespace EventDetails
             try
             {
                 Details d = new Details();
-
-                d.Token = token;
-                d.EventName = TextBox1.Text.ToString();
-                d.Type = type;
+                d.name = TextBox1.Text.ToString();
+                d.type = type;
 
                 if (Department.IsEnabled == true)
-                    d.Department = dept;
+                    d.department = dept;
                 else
-                    d.Department = " ";
+                    d.department = " ";
 
-                d.Tagline = TextBox2.Text.ToString();
-                d.Description = TextBox3.Text.ToString();
-                d.NumOfParticipants = Convert.ToInt32(TextBox4.Text);
-                d.Fees = Convert.ToInt32(TextBox5.Text);
+                d.tagline = TextBox2.Text.ToString();
+                d.description = TextBox3.Text.ToString();
+                d.teamSize = Convert.ToInt32(TextBox4.Text);
+                d.fees = Convert.ToInt32(TextBox5.Text);
                 
                 ArrayList names = new ArrayList();
                 ArrayList phone = new ArrayList();
@@ -212,16 +210,27 @@ namespace EventDetails
                 
                     round.Add(r.Text.ToString());                    
                 }
+                                
+                d.managers = new List<Managers>();
+                int k = 0, l = 0;
 
-                if (names.Count > 0)
+                while (k < names.Count)
                 {
-                    d.ManagerName = (string[])names.ToArray(typeof(string));
-                    d.Phone = (string[])phone.ToArray(typeof(string));
+                    Managers m1 = new Managers();
+                    m1.name = names[k].ToString();
+                    m1.phone = phone[k].ToString();
+                    d.managers.Add(m1);
+                    k++;
                 }
-                if (round.Count > 0)
-                    d.Round = (string[])round.ToArray(typeof(string));
 
-                string uri = "http://demo8763462.mockable.io/submit";
+                d.rounds = new List<string>();
+                while (l < round.Count)
+                {
+                    d.rounds.Add(round[l].ToString());
+                    l++;
+                }
+
+                string uri = "http://editor.swagger.io/events";
                 ResponseObject response = await Submit.PostAsJsonAsync(uri, d);
             }
             catch(Exception ex)

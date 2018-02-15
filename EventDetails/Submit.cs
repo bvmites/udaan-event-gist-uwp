@@ -29,6 +29,22 @@ namespace EventDetails
             var data = (ResponseObject)serializer.ReadObject(ms);
             return data;
         }
+
+        public async static Task<ResponseObject> PostAsJsonAsync(string uri, EditObject d)
+        {
+            var itemJson = JsonConvert.SerializeObject(d);
+            var content = new StringContent(itemJson);
+            content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+            var http = new HttpClient();
+            var response = await http.PutAsync(uri, content);
+            var result = await response.Content.ReadAsStringAsync();
+            var serializer = new DataContractJsonSerializer(typeof(ResponseObject));
+
+            var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
+            var data = (ResponseObject)serializer.ReadObject(ms);
+            return data;
+        }
     }
 
     [DataContract]
@@ -36,8 +52,5 @@ namespace EventDetails
     {
         [DataMember]
         public bool status { get; set; }
-
-        [DataMember]
-        public string token { get; set; }
     }
 }

@@ -8,11 +8,12 @@
     mc:Ignorable="d">
 
     <StackPanel Background="{ThemeResource SystemControlAcrylicWindowMediumHighBrush}">
-        <StackPanel Height="Auto" Margin="0,150,0,0">
+        <StackPanel Height="Auto" Margin="0,100,0,0">
             <TextBlock 
                 Text="Log In" 
                 FontSize="48" 
-                HorizontalAlignment="Center" />
+                HorizontalAlignment="Center"
+                VerticalAlignment="Stretch" />
         </StackPanel>
         <StackPanel Height="Auto" Margin="0,70,0,0">
             <Grid>
@@ -38,7 +39,8 @@
                 <TextBox 
                     x:Name="TextBox1" 
                     Margin="0,15,0,0" 
-                    VerticalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Stretch"
                     Grid.Row="1" 
                     Grid.Column="1" />
                 <TextBlock 
@@ -52,7 +54,8 @@
                 <PasswordBox 
                     x:Name="PasswordBox1" 
                     Margin="0,15,0,0" 
-                    VerticalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Stretch"
                     Grid.Column="1" 
                     Grid.Row="3" />
                 <Button 

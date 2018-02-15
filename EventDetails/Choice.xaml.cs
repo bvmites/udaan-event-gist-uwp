@@ -37,10 +37,9 @@ namespace EventDetails
         private async void edit_Click(object sender, RoutedEventArgs e)
         {
             try
-            { 
-                EditObject obj = await EditDetails.GetDetails(token);
-                if(obj.Status == true)
-                    this.Frame.Navigate(typeof(Edit), obj);
+            {
+                List<EditObject> obj = await EditDetails.GetDetails(token);
+                this.Frame.Navigate(typeof(EventSelect), obj);
             }
             catch(Exception ex)
             {
