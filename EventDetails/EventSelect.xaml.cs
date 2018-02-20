@@ -36,9 +36,22 @@ namespace EventDetails
 
         private void Modify_Click(object sender, RoutedEventArgs e)
         {
-            int index = EventList.SelectedIndex;
-            EditObject obj1 = obj[index];
-            this.Frame.Navigate(typeof(Edit), obj1);
+            if(EventList.SelectedIndex >= 0)
+            { 
+                int index = EventList.SelectedIndex;
+                EditObject obj1 = obj[index];
+                this.Frame.Navigate(typeof(Edit), obj1);
+            }   
+        }
+
+        public void logoutbutton_click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        public void backbutton_click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Choice));
         }
     }
 }

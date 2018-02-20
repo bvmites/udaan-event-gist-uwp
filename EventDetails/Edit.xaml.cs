@@ -60,6 +60,8 @@ namespace EventDetails
                 tb.Name = "Manager" + i;
                 tb.Text = "Manager " + i;
                 tb.Margin = new Thickness(0, 10, 0, 0);
+                tb.HorizontalAlignment = HorizontalAlignment.Stretch;
+                tb.VerticalAlignment = VerticalAlignment.Stretch;
                 Manager.Children.Add(tb);
                 Rounds.UpdateLayout();
 
@@ -67,7 +69,8 @@ namespace EventDetails
                 t.Name = "ManagerName" + i;
                 t.PlaceholderText = "Name";
                 t.Text = m1[j].name.ToString();
-                t.Width = 350;
+                t.HorizontalAlignment = HorizontalAlignment.Stretch;
+                t.VerticalAlignment = VerticalAlignment.Stretch;
                 t.Margin = new Thickness(0, 10, 0, 0);
                 Manager.Children.Add(t);
                 Rounds.UpdateLayout();
@@ -76,7 +79,8 @@ namespace EventDetails
                 n.Name = "Number" + i;
                 n.PlaceholderText = "Phone Number";
                 n.Text = m1[j].phone.ToString();
-                n.Width = 350;
+                n.HorizontalAlignment = HorizontalAlignment.Stretch;
+                n.VerticalAlignment = VerticalAlignment.Stretch;
                 n.Margin = new Thickness(0, 10, 0, 0);
                 Manager.Children.Add(n);
                 Rounds.UpdateLayout();
@@ -94,7 +98,8 @@ namespace EventDetails
                 t.Name = "Round" + i;
                 t.PlaceholderText = "Round " + i;
                 t.Text = obj.rounds[j].ToString();
-                t.Width = 350;
+                t.HorizontalAlignment = HorizontalAlignment.Stretch;
+                t.VerticalAlignment = VerticalAlignment.Stretch;
                 t.Height = 100;
                 t.Margin = new Thickness(0, 10, 0, 0);
                 Rounds.Children.Add(t);
@@ -130,13 +135,16 @@ namespace EventDetails
                     tb.Name = "Manager" + m_Count;
                     tb.Text = "Manager " + m_Count;
                     tb.Margin = new Thickness(0, 10, 0, 0);
+                    tb.HorizontalAlignment = HorizontalAlignment.Stretch;
+                    tb.VerticalAlignment = VerticalAlignment.Stretch;
                     Manager.Children.Add(tb);
                     Rounds.UpdateLayout();
 
                     TextBox t = new TextBox();
                     t.Name = "ManagerName" + m_Count;
                     t.PlaceholderText = "Name";
-                    t.Width = 350;
+                    t.HorizontalAlignment = HorizontalAlignment.Stretch;
+                    t.VerticalAlignment = VerticalAlignment.Stretch;
                     t.Margin = new Thickness(0, 10, 0, 0);
                     Manager.Children.Add(t);
                     Rounds.UpdateLayout();
@@ -144,7 +152,8 @@ namespace EventDetails
                     TextBox n = new TextBox();
                     n.Name = "Number" + m_Count;
                     n.PlaceholderText = "Phone Number";
-                    n.Width = 350;
+                    n.HorizontalAlignment = HorizontalAlignment.Stretch;
+                    n.VerticalAlignment = VerticalAlignment.Stretch;
                     n.Margin = new Thickness(0, 10, 0, 0);
                     Manager.Children.Add(n);
                     Rounds.UpdateLayout();
@@ -204,7 +213,8 @@ namespace EventDetails
                     TextBox t = new TextBox();
                     t.Name = "Round" + r_Count;
                     t.PlaceholderText = "Round " + r_Count;
-                    t.Width = 350;
+                    t.HorizontalAlignment = HorizontalAlignment.Stretch;
+                    t.VerticalAlignment = VerticalAlignment.Stretch;
                     t.Height = 100;
                     t.Margin = new Thickness(0, 10, 0, 0);
                     Rounds.Children.Add(t);
@@ -308,6 +318,16 @@ namespace EventDetails
             {
                 Console.WriteLine(ex);
             }
+        }
+
+        public void logoutbutton_click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        public void backbutton_click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Choice));
         }
     }
 }

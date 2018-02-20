@@ -27,7 +27,7 @@ namespace EventDetails
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            token = e.Parameter.ToString();
+            //token = e.Parameter.ToString();
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -56,7 +56,8 @@ namespace EventDetails
                     TextBox t = new TextBox();
                     t.Name = "Round" + r_Count;
                     t.PlaceholderText = "Round " + r_Count;
-                    t.Width = 350;
+                    t.HorizontalAlignment = HorizontalAlignment.Stretch;
+                    t.VerticalAlignment = VerticalAlignment.Stretch;
                     t.Height = 100;
                     t.Margin = new Thickness(0, 10, 0, 0);
                     Rounds.Children.Add(t);
@@ -103,13 +104,16 @@ namespace EventDetails
                     tb.Name = "Manager" + m_Count;
                     tb.Text = "Manager " + m_Count;
                     tb.Margin = new Thickness(0, 10, 0, 0);
+                    tb.HorizontalAlignment = HorizontalAlignment.Stretch;
+                    tb.VerticalAlignment = VerticalAlignment.Stretch;
                     Manager.Children.Add(tb);
                     Rounds.UpdateLayout();
 
                     TextBox t = new TextBox();
                     t.Name = "ManagerName" + m_Count;
                     t.PlaceholderText = "Name";
-                    t.Width = 350;
+                    t.HorizontalAlignment = HorizontalAlignment.Stretch;
+                    t.VerticalAlignment = VerticalAlignment.Stretch;
                     t.Margin = new Thickness(0, 10, 0, 0);
                     Manager.Children.Add(t);
                     Rounds.UpdateLayout();
@@ -117,8 +121,9 @@ namespace EventDetails
                     TextBox n = new TextBox();
                     n.Name = "Number" + m_Count;
                     n.PlaceholderText = "Phone Number";
-                    n.Width = 350;
                     n.Margin = new Thickness(0, 10, 0, 0);
+                    n.HorizontalAlignment = HorizontalAlignment.Stretch;
+                    n.VerticalAlignment = VerticalAlignment.Stretch;
                     Manager.Children.Add(n);
                     Rounds.UpdateLayout();
 
@@ -237,6 +242,16 @@ namespace EventDetails
             {
                 Console.WriteLine(ex);
             }
+        }
+
+        public void logoutbutton_click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        public void backbutton_click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Choice));
         }
     }
 }

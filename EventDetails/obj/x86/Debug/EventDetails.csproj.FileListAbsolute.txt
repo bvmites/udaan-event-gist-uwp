@@ -615,7 +615,6 @@ C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debu
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\System.Xml.XDocument.dll
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\System.Xml.XmlDocument.dll
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\System.Xml.XmlSerializer.dll
-C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\EventDetails.csprojResolveAssemblyReference.cache
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\App.g.i.cs
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\App.g.cs
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\Choice.g.i.cs
@@ -726,3 +725,4 @@ C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debu
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\EventSelect.g.cs
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\EventSelect.xaml
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\EventSelect.xbf
+C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\EventDetails.csprojResolveAssemblyReference.cache

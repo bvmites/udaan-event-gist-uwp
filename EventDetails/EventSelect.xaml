@@ -8,18 +8,37 @@
     mc:Ignorable="d"
     Background="{StaticResource SystemControlAcrylicWindowMediumHighBrush}">
 
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
-        <TextBlock 
-            Text="Select an Event" 
-            Margin="0,0,0,20" />
-        <ComboBox 
-            x:Name="EventList" 
-            HorizontalAlignment="Stretch" 
-            Margin="0,0,0,20"
-            PlaceholderText="Select event" />
-        <Button 
-            x:Name="Modify" 
-            Click="Modify_Click" 
-            Content="Modify" />
+    <StackPanel>
+        <RelativePanel>
+            <Button 
+                    x:Name="BackButton" 
+                    RelativePanel.AlignLeftWithPanel="True" 
+                    Content="&#xE0A6;" 
+                    FontFamily="Segoe MDL2 Assets"
+                    Click="backbutton_click" />
+            <Button 
+                    x:Name="LogOutButton" 
+                    RelativePanel.AlignRightWithPanel="True" 
+                    Content="Log out" 
+                    Click="logoutbutton_click" />
+        </RelativePanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Stretch" >
+            <TextBlock 
+                Text="Select an Event" 
+                Margin="0,0,0,20" 
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch" />
+            <ComboBox 
+                x:Name="EventList" 
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Margin="0,0,0,20" />
+            <Button 
+                x:Name="Modify" 
+                Click="Modify_Click" 
+                Content="Modify"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch" />
+        </StackPanel>
     </StackPanel>
 </Page>

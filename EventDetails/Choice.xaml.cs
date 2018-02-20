@@ -26,7 +26,7 @@ namespace EventDetails
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            token = e.Parameter.ToString();
+            //token = e.Parameter.ToString();
         }
 
         private void register_Click(object sender, RoutedEventArgs e)
@@ -45,6 +45,11 @@ namespace EventDetails
             {
                 Console.WriteLine(ex);
             }
+        }
+
+        public void logoutbutton_click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }
