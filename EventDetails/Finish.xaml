@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="EventDetails.Finish"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EventDetails"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <RelativePanel Background="{StaticResource SystemControlBackgroundAccentBrush}">
+            <Button 
+                x:Name="LogOutButton" 
+                RelativePanel.AlignRightWithPanel="True"
+                Background="{StaticResource SystemControlBackgroundAltMediumBrush}"
+                Content="Log out"
+                Click="logoutbutton_Click"/>
+        </RelativePanel>
+        <Button 
+            x:Name="Again" 
+            Click="Again_Click" 
+            Grid.Row="1" 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center"
+            Background="{StaticResource SystemControlBackgroundAccentBrush}"
+            Content="Submit or edit another Event" />
+    </Grid>
+</Page>

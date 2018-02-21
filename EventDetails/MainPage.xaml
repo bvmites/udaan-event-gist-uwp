@@ -13,6 +13,7 @@
                 Text="Log In" 
                 FontSize="48" 
                 HorizontalAlignment="Center"
+                Foreground="{StaticResource SystemControlBackgroundAccentBrush}"
                 VerticalAlignment="Stretch" />
         </StackPanel>
         <StackPanel Height="Auto" Margin="0,70,0,0">
@@ -34,13 +35,15 @@
                     Text="Email ID" 
                     FontSize="20" 
                     VerticalAlignment="Center" 
-                    HorizontalAlignment="Left" 
+                    HorizontalAlignment="Left"
+                    Foreground="{StaticResource SystemControlBackgroundAccentBrush}"
                     Grid.Column="1" />
                 <TextBox 
                     x:Name="TextBox1" 
                     Margin="0,15,0,0" 
                     VerticalAlignment="Center"
                     HorizontalAlignment="Stretch"
+                    Foreground="{StaticResource SystemControlBackgroundAccentBrush}"
                     Grid.Row="1" 
                     Grid.Column="1" />
                 <TextBlock 
@@ -48,7 +51,8 @@
                     FontSize="20" 
                     Margin="0,20,0,0" 
                     VerticalAlignment="Center" 
-                    HorizontalAlignment="Left" 
+                    HorizontalAlignment="Left"
+                    Foreground="{StaticResource SystemControlBackgroundAccentBrush}"
                     Grid.Row="2" 
                     Grid.Column="1" />
                 <PasswordBox 
@@ -56,6 +60,7 @@
                     Margin="0,15,0,0" 
                     VerticalAlignment="Center"
                     HorizontalAlignment="Stretch"
+                    Foreground="{StaticResource SystemControlBackgroundAccentBrush}"
                     Grid.Column="1" 
                     Grid.Row="3" />
                 <Button 
@@ -64,7 +69,8 @@
                     Margin="0,30,0,0" 
                     Content="Log In" 
                     Grid.Column="1" 
-                    Grid.Row="4" 
+                    Grid.Row="4"
+                    Background="{StaticResource SystemControlBackgroundAccentBrush}"
                     HorizontalAlignment="Center" 
                     Click="Button_Click" />
                 <TextBlock
@@ -73,6 +79,7 @@
                     x:Name="Invalid"
                     Visibility="Collapsed"
                     Text="Invalid Username or Password"
+                    Foreground="{StaticResource SystemControlBackgroundAccentBrush}"
                     HorizontalAlignment="Center"
                     Margin="0,30,0,0" />
             </Grid>

@@ -726,3 +726,8 @@ C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debu
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\EventSelect.xaml
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\EventSelect.xbf
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\EventDetails.csprojResolveAssemblyReference.cache
+C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\Finish.g.i.cs
+C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\Finish.g.cs
+C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\Finish.xaml
+C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\Finish.xbf
+C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\Finish.xbf

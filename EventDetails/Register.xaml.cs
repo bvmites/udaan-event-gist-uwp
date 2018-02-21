@@ -60,6 +60,7 @@ namespace EventDetails
                     t.VerticalAlignment = VerticalAlignment.Stretch;
                     t.Height = 100;
                     t.Margin = new Thickness(0, 10, 0, 0);
+                    t.Foreground = TextBox1.Foreground;
                     Rounds.Children.Add(t);
                     Rounds.UpdateLayout();
                     r_Count++;
@@ -106,6 +107,7 @@ namespace EventDetails
                     tb.Margin = new Thickness(0, 10, 0, 0);
                     tb.HorizontalAlignment = HorizontalAlignment.Stretch;
                     tb.VerticalAlignment = VerticalAlignment.Stretch;
+                    tb.Foreground = TextBox1.Foreground;
                     Manager.Children.Add(tb);
                     Rounds.UpdateLayout();
 
@@ -115,6 +117,7 @@ namespace EventDetails
                     t.HorizontalAlignment = HorizontalAlignment.Stretch;
                     t.VerticalAlignment = VerticalAlignment.Stretch;
                     t.Margin = new Thickness(0, 10, 0, 0);
+                    t.Foreground = TextBox1.Foreground;
                     Manager.Children.Add(t);
                     Rounds.UpdateLayout();
 
@@ -124,6 +127,7 @@ namespace EventDetails
                     n.Margin = new Thickness(0, 10, 0, 0);
                     n.HorizontalAlignment = HorizontalAlignment.Stretch;
                     n.VerticalAlignment = VerticalAlignment.Stretch;
+                    n.Foreground = TextBox1.Foreground;
                     Manager.Children.Add(n);
                     Rounds.UpdateLayout();
 
@@ -237,6 +241,7 @@ namespace EventDetails
 
                 string uri = "http://editor.swagger.io/events";
                 ResponseObject response = await Submit.PostAsJsonAsync(uri, d);
+                this.Frame.Navigate(typeof(Finish));
             }
             catch(Exception ex)
             {

@@ -9,26 +9,29 @@
     Background="{StaticResource SystemControlAcrylicWindowMediumHighBrush}" >
 
     <StackPanel>
-        <RelativePanel>
+        <RelativePanel Background="{StaticResource SystemControlBackgroundAccentBrush}">
             <Button 
-                    x:Name="LogOutButton" 
-                    RelativePanel.AlignRightWithPanel="True" 
-                    Content="Log out" 
-                    Click="logoutbutton_click" />
+                x:Name="LogOutButton" 
+                RelativePanel.AlignRightWithPanel="True" 
+                Background="{StaticResource SystemControlBackgroundAltMediumBrush}"
+                Content="Log out" 
+                Click="logoutbutton_click" />
         </RelativePanel>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Button 
                 Name="register" 
                 Width="100" 
                 Margin="0,0,20,0" 
-                Content="Register" 
+                Content="Register"
+                Background="{StaticResource SystemControlBackgroundAccentBrush}"
                 Click="register_Click" />
-            <Line Stretch="Fill" Margin="0,0,5,0" Height="650" Stroke="Red" X1="0" Y1="0" X2="0" Y2="1"/>
-            <Line Stretch="Fill" Margin="5,0,0,0" Height="650" Stroke="Red" X1="0" Y1="0" X2="0" Y2="1"/>
+            <Line Stretch="Fill" Margin="0,30,5,0" Height="600" Stroke="{StaticResource SystemControlBackgroundAccentBrush}" X1="0" Y1="0" X2="0" Y2="1"/>
+            <Line Stretch="Fill" Margin="5,30,0,0" Height="600" Stroke="{StaticResource SystemControlBackgroundAccentBrush}" X1="0" Y1="0" X2="0" Y2="1"/>
             <Button 
                 Name="edit" 
                 Width="100" 
                 Margin="20,0,0,0" 
+                Background="{StaticResource SystemControlBackgroundAccentBrush}"
                 Content="Edit" 
                 Click="edit_Click" />
         </StackPanel>

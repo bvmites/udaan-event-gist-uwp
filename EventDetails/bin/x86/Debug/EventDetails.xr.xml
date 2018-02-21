@@ -20,6 +20,7 @@
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
+      <RootProperty Name="Background" />
       <RootProperty Name="Children" />
       <RootMethod Name="GetAlignRightWithPanel" />
       <RootMethod Name="SetAlignRightWithPanel" />
@@ -31,10 +32,12 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Background" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="FontFamily" />
+      <RootProperty Name="FontSize" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Line">
@@ -59,6 +62,7 @@
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Background" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRow" />
@@ -87,6 +91,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="TextWrapping" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
@@ -94,6 +99,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="IsEnabled" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="Items" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
@@ -102,10 +108,12 @@
     </RootType>
     <RootType FullName="EventDetails.Edit" />
     <RootType FullName="EventDetails.EventSelect" />
+    <RootType FullName="EventDetails.Finish" />
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Foreground" />
     </RootType>
     <RootType FullName="EventDetails.MainPage" />
     <RootType FullName="EventDetails.Register" />

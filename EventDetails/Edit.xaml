@@ -9,23 +9,27 @@
 
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
         <StackPanel MinWidth="1280" Background="{ThemeResource SystemControlAcrylicWindowMediumHighBrush}">
-            <RelativePanel>
+            <RelativePanel Background="{StaticResource SystemControlBackgroundAccentBrush}">
                 <Button 
                     x:Name="BackButton" 
                     RelativePanel.AlignLeftWithPanel="True" 
                     Content="&#xE0A6;" 
                     FontFamily="Segoe MDL2 Assets"
+                    FontSize="20"
+                    Background="{StaticResource SystemControlBackgroundAltMediumBrush}"
                     Click="backbutton_click" />
                 <Button 
                     x:Name="LogOutButton" 
                     RelativePanel.AlignRightWithPanel="True" 
                     Content="Log out" 
+                    Background="{StaticResource SystemControlBackgroundAltMediumBrush}"
                     Click="logoutbutton_click" />
             </RelativePanel>
             <StackPanel Height="Auto" Margin="0,50,0,0">
                 <TextBlock 
                     Text="Edit Event Details" 
-                    FontSize="48" 
+                    FontSize="48"
+                    Foreground="{StaticResource SystemControlBackgroundAccentBrush}"
                     HorizontalAlignment="Center" />
             </StackPanel>
             <Grid Margin="50,0,50,20">
@@ -53,14 +57,16 @@
                                 Text="Type" 
                                 FontSize="20" 
                                 VerticalAlignment="Stretch" 
-                                HorizontalAlignment="Left" />
+                                HorizontalAlignment="Left"
+                                Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                             <ComboBox
                                 x:Name="Type"
                                 Grid.Row="1"
                                 VerticalAlignment="Stretch"
                                 Margin="0,10,0,0"
                                 HorizontalAlignment="Stretch"
-                                SelectionChanged="ComboBox_SelectionChanged">
+                                SelectionChanged="ComboBox_SelectionChanged"
+                                Foreground="{StaticResource SystemControlBackgroundAccentBrush}">
                                 <ComboBoxItem Content="Technical" />
                                 <ComboBoxItem Content="Non-Technical" />
                                 <ComboBoxItem Content="Other"/>
@@ -71,7 +77,8 @@
                                 Text="Department" 
                                 FontSize="20" 
                                 VerticalAlignment="Stretch" 
-                                HorizontalAlignment="Left" />
+                                HorizontalAlignment="Left" 
+                                Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                             <ComboBox
                                 x:Name="Department"
                                 Grid.Row="1"
@@ -79,6 +86,7 @@
                                 Margin="0,10,0,0"
                                 HorizontalAlignment="Stretch"
                                 IsEnabled="False"
+                                Foreground="{StaticResource SystemControlBackgroundAccentBrush}"
                                 SelectionChanged="Department_SelectionChanged">
                                 <ComboBoxItem Content="Computer/IT" />
                                 <ComboBoxItem Content="Civil" />
@@ -94,33 +102,38 @@
                         FontSize="20" 
                         VerticalAlignment="Stretch" 
                         HorizontalAlignment="Left" 
-                        Grid.Row="2" />
+                        Grid.Row="2"
+                        Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                     <TextBox
                         x:Name="TextBox1" 
                         Margin="0,10,0,0" 
                         VerticalAlignment="Stretch" 
                         HorizontalAlignment="Stretch"
-                        Grid.Row="3" />
+                        Grid.Row="3" 
+                        Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                     <TextBlock 
                         Margin="0,20,0,0"
                         Text="Tag Line" 
                         FontSize="20" 
                         VerticalAlignment="Stretch" 
                         HorizontalAlignment="Left" 
-                        Grid.Row="4" />
+                        Grid.Row="4" 
+                        Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                     <TextBox
                         x:Name="TextBox2" 
                         Margin="0,10,0,0" 
                         VerticalAlignment="Stretch" 
                         HorizontalAlignment="Stretch"
-                        Grid.Row="5" />
+                        Grid.Row="5" 
+                        Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                     <TextBlock 
                         Margin="0,20,0,0"
                         Text="Description" 
                         FontSize="20" 
                         VerticalAlignment="Stretch" 
                         HorizontalAlignment="Left" 
-                        Grid.Row="6" />
+                        Grid.Row="6" 
+                        Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                     <TextBox
                         x:Name="TextBox3" 
                         Margin="0,10,0,0" 
@@ -128,21 +141,24 @@
                         HorizontalAlignment="Stretch"
                         Grid.Row="7"
                         Height="100"
-                        TextWrapping="Wrap" />
+                        TextWrapping="Wrap" 
+                        Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                     <TextBlock 
                         Text="Number of Participants" 
                         Margin="0,20,0,0"
                         FontSize="20" 
                         VerticalAlignment="Stretch" 
                         HorizontalAlignment="Left" 
-                        Grid.Row="8"/>
+                        Grid.Row="8"
+                        Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                     <TextBox
                         x:Name="TextBox4" 
                         Margin="0,10,0,0" 
                         VerticalAlignment="Stretch"
                         HorizontalAlignment="Stretch"
                         Grid.Row="9"
-                        TextWrapping="Wrap" />
+                        TextWrapping="Wrap" 
+                        Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Stretch" Grid.Column="1" Margin="20,20,20,0">
                     <StackPanel>
@@ -151,38 +167,44 @@
                             FontSize="20" 
                             VerticalAlignment="Stretch" 
                             HorizontalAlignment="Left" 
-                            Grid.Row="0" />
+                            Grid.Row="0"
+                            Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                         <TextBox
                             x:Name="TextBox5" 
                             Margin="0,10,0,0" 
                             VerticalAlignment="Stretch" 
                             HorizontalAlignment="Stretch"
-                            Grid.Row="1" />
+                            Grid.Row="1"
+                            Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                     </StackPanel>
                     <TextBlock 
                         Margin="0,20,0,0"
                         Text="Manager Details" 
                         FontSize="20" 
                         VerticalAlignment="Stretch" 
-                        HorizontalAlignment="Left" />
+                        HorizontalAlignment="Left" 
+                        Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                     <StackPanel x:Name="Manager"  HorizontalAlignment="Stretch">
                         <TextBlock 
                             Margin="0,10,0,0"
                             Text="Manager 1" 
                             VerticalAlignment="Stretch" 
-                            HorizontalAlignment="Left"/>
+                            HorizontalAlignment="Left"
+                            Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                         <TextBox
                             x:Name="TextBox6" 
                             Margin="0,10,0,0"
                             PlaceholderText="Name"
                             VerticalAlignment="Stretch" 
-                            HorizontalAlignment="Stretch" />
+                            HorizontalAlignment="Stretch" 
+                            Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                         <TextBox
                             x:Name="TextBox7" 
                             PlaceholderText="Phone Number"
                             Margin="0,10,0,0" 
                             VerticalAlignment="Stretch" 
-                            HorizontalAlignment="Stretch" />
+                            HorizontalAlignment="Stretch" 
+                            Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button 
@@ -190,7 +212,8 @@
                             Margin="0,20,20,0" 
                             VerticalAlignment="Stretch"
                             HorizontalAlignment="Stretch"
-                            Click="Add_Manager">
+                            Click="Add_Manager"
+                            Background="{StaticResource SystemControlBackgroundAccentBrush}" >
                             Add Manager
                         </Button>
                         <Button 
@@ -198,15 +221,16 @@
                             Margin="20,20,0,0"
                             VerticalAlignment="Stretch"
                             HorizontalAlignment="Stretch"
-                            Click="Remove_Manager">
+                            Click="Remove_Manager"
+                            Background="{StaticResource SystemControlBackgroundAccentBrush}" >
                             Remove Manager
                         </Button>
                     </StackPanel>
                     <TextBlock 
                         Name="Warning1" 
                         Margin="0,10,0,0" 
-                        Visibility="Collapsed" 
-                        Foreground="#FFEE1F1F" />
+                        Visibility="Collapsed"
+                        Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                 </StackPanel>
                 <StackPanel Margin="40,20,0,0" Grid.Column="2" HorizontalAlignment="Stretch">
                     <StackPanel x:Name="Rounds">
@@ -214,14 +238,16 @@
                             Text="Round Details" 
                             FontSize="20" 
                             VerticalAlignment="Stretch" 
-                            HorizontalAlignment="Left" />
+                            HorizontalAlignment="Left"
+                            Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                         <TextBox
                             x:Name="TextBox8" 
                             Margin="0,10,0,0" 
                             VerticalAlignment="Stretch" 
                             HorizontalAlignment="Stretch" 
                             Height="100"
-                            PlaceholderText="Round 1"/>
+                            PlaceholderText="Round 1"
+                            Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
                         <Button 
@@ -229,7 +255,8 @@
                             Margin="0,0,0,0"
                             VerticalAlignment="Stretch"
                             HorizontalAlignment="Stretch"
-                            Click="AddRound_Click">
+                            Click="AddRound_Click"
+                            Background="{StaticResource SystemControlBackgroundAccentBrush}" >
                             Add Round
                         </Button>
                         <Button 
@@ -238,22 +265,24 @@
                             VerticalAlignment="Stretch"
                             HorizontalAlignment="Stretch"
                             Click="RemoveRound_Click" 
-                            Visibility="Visible">
+                            Visibility="Visible"
+                            Background="{StaticResource SystemControlBackgroundAccentBrush}" >
                             Remove Round
                         </Button>
                     </StackPanel>
                     <TextBlock 
                         Name="Warning2" 
                         Margin="0,10,0,0" 
-                        Visibility="Collapsed" 
-                        Foreground="#FFEE1F1F"/>
+                        Visibility="Collapsed"
+                        Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                     <Button 
                         Margin="0,20,0,0" 
                         x:Name="submit" 
                         Content="Submit" 
                         VerticalAlignment="Stretch"
                         HorizontalAlignment="Center" 
-                        Click="submit_Click" />
+                        Click="submit_Click" 
+                        Background="{StaticResource SystemControlBackgroundAccentBrush}" />
                 </StackPanel>
             </Grid>
         </StackPanel>

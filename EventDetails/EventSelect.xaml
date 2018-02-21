@@ -9,34 +9,40 @@
     Background="{StaticResource SystemControlAcrylicWindowMediumHighBrush}">
 
     <StackPanel>
-        <RelativePanel>
+        <RelativePanel Background="{StaticResource SystemControlBackgroundAccentBrush}">
             <Button 
-                    x:Name="BackButton" 
-                    RelativePanel.AlignLeftWithPanel="True" 
-                    Content="&#xE0A6;" 
-                    FontFamily="Segoe MDL2 Assets"
-                    Click="backbutton_click" />
+                x:Name="BackButton" 
+                RelativePanel.AlignLeftWithPanel="True" 
+                Content="&#xE0A6;"
+                FontSize="20"
+                FontFamily="Segoe MDL2 Assets"
+                Background="{StaticResource SystemControlBackgroundAltMediumBrush}"
+                Click="backbutton_click" />
             <Button 
-                    x:Name="LogOutButton" 
-                    RelativePanel.AlignRightWithPanel="True" 
-                    Content="Log out" 
-                    Click="logoutbutton_click" />
+                x:Name="LogOutButton" 
+                RelativePanel.AlignRightWithPanel="True" 
+                Content="Log out" 
+                Background="{StaticResource SystemControlBackgroundAltMediumBrush}"
+                Click="logoutbutton_click" />
         </RelativePanel>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Stretch" >
+        <StackPanel Margin="0,200,0,0" HorizontalAlignment="Center" VerticalAlignment="Stretch" >
             <TextBlock 
                 Text="Select an Event" 
-                Margin="0,0,0,20" 
+                Margin="0,0,0,20"
+                Foreground="{StaticResource SystemControlBackgroundAccentBrush}"
                 HorizontalAlignment="Stretch" 
                 VerticalAlignment="Stretch" />
             <ComboBox 
                 x:Name="EventList" 
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Stretch"
+                Foreground="{StaticResource SystemControlBackgroundAccentBrush}"
                 Margin="0,0,0,20" />
             <Button 
                 x:Name="Modify" 
                 Click="Modify_Click" 
                 Content="Modify"
+                Background="{StaticResource SystemControlBackgroundAccentBrush}"
                 VerticalAlignment="Stretch"
                 HorizontalAlignment="Stretch" />
         </StackPanel>
