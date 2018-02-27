@@ -27,7 +27,7 @@ namespace EventDetails
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            //token = e.Parameter.ToString();
+            token = e.Parameter.ToString();
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -50,7 +50,7 @@ namespace EventDetails
         {
             try
             {
-                if (r_Count > 3) throw new Exception();
+                if (r_Count > 5) throw new Exception();
                 {
                     Warning2.Visibility = Visibility.Collapsed;
                     TextBox t = new TextBox();
@@ -68,7 +68,7 @@ namespace EventDetails
             }
             catch(Exception)
             {
-                Warning2.Text = "Can not add more than 3 rounds";
+                Warning2.Text = "Can not add more than 5 rounds";
                 Warning2.Visibility = Visibility.Visible;
             }
         }
@@ -97,7 +97,7 @@ namespace EventDetails
         {
             try
             {
-                if (m_Count > 3) throw new Exception();
+                if (m_Count > 5) throw new Exception();
                 {
                     Warning1.Visibility = Visibility.Collapsed;
 
@@ -136,7 +136,7 @@ namespace EventDetails
             }
             catch(Exception)
             {
-                Warning1.Text = "Can not add more than 3 managers";
+                Warning1.Text = "Can not add more than 5 managers";
                 Warning1.Visibility = Visibility.Visible;
             }
         }
@@ -180,9 +180,10 @@ namespace EventDetails
         {
             try
             {
+                Invalid.Visibility = Visibility.Collapsed;
                 Details d = new Details();
-                d.name = TextBox1.Text.ToString();
-                d.type = type;
+                d.eventName = TextBox1.Text.ToString();
+                d.eventType = type;
 
                 if (Department.IsEnabled == true)
                     d.department = dept;
@@ -192,7 +193,7 @@ namespace EventDetails
                 d.tagline = TextBox2.Text.ToString();
                 d.description = TextBox3.Text.ToString();
                 d.teamSize = Convert.ToInt32(TextBox4.Text);
-                d.fees = Convert.ToInt32(TextBox5.Text);
+                d.price = Convert.ToInt32(TextBox5.Text);
                 
                 ArrayList names = new ArrayList();
                 ArrayList phone = new ArrayList();
@@ -212,6 +213,14 @@ namespace EventDetails
                     phone.Add(p.Text.ToString());
                 }
 
+                string name1 = (names[names.Count - 1]).ToString();
+                names.RemoveAt(names.Count - 1);
+                names.Insert(0, name1);
+
+                string phone1 = (phone[phone.Count - 1]).ToString();
+                phone.RemoveAt(phone.Count - 1);
+                phone.Insert(0, phone1);
+
                 while (r_Count - 1 > 1)
                 {
                     r_Count--;
@@ -219,7 +228,11 @@ namespace EventDetails
                 
                     round.Add(r.Text.ToString());                    
                 }
-                                
+
+                string round1 = (round[round.Count - 1]).ToString();
+                round.RemoveAt(round.Count - 1);
+                round.Insert(0, round1);
+
                 d.managers = new List<Managers>();
                 int k = 0, l = 0;
 
@@ -239,13 +252,21 @@ namespace EventDetails
                     l++;
                 }
 
-                string uri = "http://editor.swagger.io/events";
-                ResponseObject response = await Submit.PostAsJsonAsync(uri, d);
-                this.Frame.Navigate(typeof(Finish));
+                string uri = "http://udaan18-events-api.herokuapp.com/events";
+                ResponseObject response = await Submit.PostAsJsonAsync(uri, d, token);
+
+                if (response.status == true)
+                    this.Frame.Navigate(typeof(Finish), token);
+                else
+                {
+                    Invalid.Text = "Submission unsuccessfull. (Are you missing any field..?)";
+                    Invalid.Visibility = Visibility.Visible;
+                }
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex);
+                Invalid.Text = "Each field is complusory with respective type..!";
+                Invalid.Visibility = Visibility.Visible;
             }
         }
 
@@ -256,7 +277,7 @@ namespace EventDetails
 
         public void backbutton_click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Choice));
+            this.Frame.Navigate(typeof(Choice), token);
         }
     }
 }

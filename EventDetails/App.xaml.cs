@@ -31,7 +31,7 @@ namespace EventDetails
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
         }
 
         /// <summary>

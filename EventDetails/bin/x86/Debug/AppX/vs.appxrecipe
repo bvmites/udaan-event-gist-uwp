@@ -31,17 +31,25 @@
     <AppXManifest Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-20T17:22:08.790</Modified>
+      <Modified>2018-02-27T16:52:11.480</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\EventDetails.exe">
       <PackagePath>entrypoint\EventDetails.exe</PackagePath>
-      <Modified>2018-02-20T17:22:04.941</Modified>
+      <Modified>2018-02-27T16:52:06.270</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
       <Modified>2016-11-04T23:25:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\microsoft.identitymodel.logging\5.2.1\lib\netstandard1.4\Microsoft.IdentityModel.Logging.dll">
+      <PackagePath>Microsoft.IdentityModel.Logging.dll</PackagePath>
+      <Modified>2018-02-08T16:46:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\microsoft.identitymodel.tokens\5.2.1\lib\netstandard1.4\Microsoft.IdentityModel.Tokens.dll">
+      <PackagePath>Microsoft.IdentityModel.Tokens.dll</PackagePath>
+      <Modified>2018-02-08T16:46:44.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\microsoft.net.http\2.2.29\lib\win8\System.Net.Http.Extensions.dll">
       <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
@@ -283,6 +291,10 @@
       <PackagePath>System.Globalization.Extensions.dll</PackagePath>
       <Modified>2016-06-11T17:43:40.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.identitymodel.tokens.jwt\5.2.1\lib\netstandard1.4\System.IdentityModel.Tokens.Jwt.dll">
+      <PackagePath>System.IdentityModel.Tokens.Jwt.dll</PackagePath>
+      <Modified>2018-02-08T16:46:52.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.io.compression\4.3.0\runtimes\win\lib\netstandard1.3\System.IO.Compression.dll">
       <PackagePath>System.IO.Compression.dll</PackagePath>
       <Modified>2016-11-04T23:26:08.000</Modified>
@@ -347,9 +359,9 @@
       <PackagePath>System.Net.WebSockets.dll</PackagePath>
       <Modified>2016-06-11T17:44:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.net.websockets.client\4.0.0\runtimes\win\lib\netcore50\System.Net.WebSockets.Client.dll">
+    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.net.websockets.client\4.0.2\runtimes\win\lib\netcore50\System.Net.WebSockets.Client.dll">
       <PackagePath>System.Net.WebSockets.Client.dll</PackagePath>
-      <Modified>2016-06-11T17:44:08.000</Modified>
+      <Modified>2017-11-20T09:04:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.numerics.vectors\4.1.1\lib\portable-net45+win8+wp8+wpa81\System.Numerics.Vectors.dll">
       <PackagePath>System.Numerics.Vectors.dll</PackagePath>
@@ -363,13 +375,13 @@
       <PackagePath>System.ObjectModel.dll</PackagePath>
       <Modified>2016-11-04T23:26:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.private.datacontractserialization\4.1.2\lib\netstandard1.3\System.Private.DataContractSerialization.dll">
+    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.private.datacontractserialization\4.3.0\lib\netstandard1.3\System.Private.DataContractSerialization.dll">
       <PackagePath>System.Private.DataContractSerialization.dll</PackagePath>
-      <Modified>2017-02-09T07:56:02.000</Modified>
+      <Modified>2016-11-04T23:26:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.private.servicemodel\4.1.0\runtimes\win7\lib\netcore50\System.Private.ServiceModel.dll">
+    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.private.servicemodel\4.1.1\runtimes\win7\lib\netcore50\System.Private.ServiceModel.dll">
       <PackagePath>System.Private.ServiceModel.dll</PackagePath>
-      <Modified>2016-06-13T16:21:30.000</Modified>
+      <Modified>2017-12-12T19:01:12.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.reflection.context\4.0.1\lib\netcore50\System.Reflection.Context.dll">
       <PackagePath>System.Reflection.Context.dll</PackagePath>
@@ -379,9 +391,9 @@
       <PackagePath>System.Reflection.DispatchProxy.dll</PackagePath>
       <Modified>2016-06-11T17:44:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.reflection.emit\4.0.1\lib\netcore50\System.Reflection.Emit.dll">
+    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.reflection.emit\4.3.0\lib\netcore50\System.Reflection.Emit.dll">
       <PackagePath>System.Reflection.Emit.dll</PackagePath>
-      <Modified>2016-06-11T17:44:16.000</Modified>
+      <Modified>2016-11-04T23:26:44.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.reflection.emit.ilgeneration\4.3.0\lib\netcore50\System.Reflection.Emit.ILGeneration.dll">
       <PackagePath>System.Reflection.Emit.ILGeneration.dll</PackagePath>
@@ -423,9 +435,9 @@
       <PackagePath>System.Runtime.Serialization.Primitives.dll</PackagePath>
       <Modified>2016-11-04T23:27:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.runtime.serialization.xml\4.1.2\lib\netcore50\System.Runtime.Serialization.Xml.dll">
+    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.runtime.serialization.xml\4.3.0\lib\netcore50\System.Runtime.Serialization.Xml.dll">
       <PackagePath>System.Runtime.Serialization.Xml.dll</PackagePath>
-      <Modified>2017-02-09T07:56:02.000</Modified>
+      <Modified>2016-11-04T23:26:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.runtime.windowsruntime\4.3.0\runtimes\win8\lib\netstandard1.3\System.Runtime.WindowsRuntime.dll">
       <PackagePath>System.Runtime.WindowsRuntime.dll</PackagePath>
@@ -435,9 +447,9 @@
       <PackagePath>System.Runtime.WindowsRuntime.UI.Xaml.dll</PackagePath>
       <Modified>2016-06-11T17:44:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.security.claims\4.0.1\lib\netstandard1.3\System.Security.Claims.dll">
+    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.security.claims\4.3.0\lib\netstandard1.3\System.Security.Claims.dll">
       <PackagePath>System.Security.Claims.dll</PackagePath>
-      <Modified>2016-06-11T17:44:40.000</Modified>
+      <Modified>2016-11-04T23:27:04.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.security.cryptography.algorithms\4.3.0\runtimes\win\lib\netcore50\System.Security.Cryptography.Algorithms.dll">
       <PackagePath>System.Security.Cryptography.Algorithms.dll</PackagePath>
@@ -459,29 +471,29 @@
       <PackagePath>System.Security.Cryptography.X509Certificates.dll</PackagePath>
       <Modified>2016-11-04T23:27:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.security.principal\4.0.1\lib\netcore50\System.Security.Principal.dll">
+    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.security.principal\4.3.0\lib\netcore50\System.Security.Principal.dll">
       <PackagePath>System.Security.Principal.dll</PackagePath>
-      <Modified>2016-06-11T17:44:46.000</Modified>
+      <Modified>2016-11-04T23:27:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.servicemodel.duplex\4.0.1\lib\netcore50\System.ServiceModel.Duplex.dll">
+    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.servicemodel.duplex\4.0.2\lib\netcore50\System.ServiceModel.Duplex.dll">
       <PackagePath>System.ServiceModel.Duplex.dll</PackagePath>
-      <Modified>2016-06-13T16:21:34.000</Modified>
+      <Modified>2017-12-12T19:01:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.servicemodel.http\4.1.0\lib\netcore50\System.ServiceModel.Http.dll">
+    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.servicemodel.http\4.1.1\lib\netcore50\System.ServiceModel.Http.dll">
       <PackagePath>System.ServiceModel.Http.dll</PackagePath>
-      <Modified>2016-06-13T16:21:34.000</Modified>
+      <Modified>2017-12-12T19:01:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.servicemodel.nettcp\4.1.0\lib\netcore50\System.ServiceModel.NetTcp.dll">
+    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.servicemodel.nettcp\4.1.1\lib\netcore50\System.ServiceModel.NetTcp.dll">
       <PackagePath>System.ServiceModel.NetTcp.dll</PackagePath>
-      <Modified>2016-06-13T16:21:34.000</Modified>
+      <Modified>2017-12-12T19:01:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.servicemodel.primitives\4.1.0\lib\netcore50\System.ServiceModel.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.servicemodel.primitives\4.1.1\lib\netcore50\System.ServiceModel.Primitives.dll">
       <PackagePath>System.ServiceModel.Primitives.dll</PackagePath>
-      <Modified>2016-06-13T16:21:34.000</Modified>
+      <Modified>2017-12-12T19:01:20.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.servicemodel.security\4.0.1\lib\netcore50\System.ServiceModel.Security.dll">
+    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.servicemodel.security\4.0.2\lib\netcore50\System.ServiceModel.Security.dll">
       <PackagePath>System.ServiceModel.Security.dll</PackagePath>
-      <Modified>2016-06-13T16:21:36.000</Modified>
+      <Modified>2017-12-12T19:01:22.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.text.encoding.codepages\4.0.1\runtimes\win\lib\netstandard1.3\System.Text.Encoding.CodePages.dll">
       <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
@@ -523,9 +535,9 @@
       <PackagePath>System.Xml.XmlDocument.dll</PackagePath>
       <Modified>2016-11-04T23:27:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.xml.xmlserializer\4.0.11\lib\netcore50\System.Xml.XmlSerializer.dll">
+    <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\system.xml.xmlserializer\4.3.0\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
-      <Modified>2016-06-11T17:45:04.000</Modified>
+      <Modified>2016-11-04T23:27:36.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -567,7 +579,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\EventDetails.xr.xml">
       <PackagePath>EventDetails.xr.xml</PackagePath>
-      <Modified>2018-02-20T16:53:55.571</Modified>
+      <Modified>2018-02-27T12:08:37.915</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -576,11 +588,11 @@
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-20T17:22:07.916</Modified>
+      <Modified>2018-02-27T16:52:10.083</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\Core\EventDetails.exe">
       <PackagePath>EventDetails.exe</PackagePath>
-      <Modified>2018-02-20T17:22:08.781</Modified>
+      <Modified>2018-02-27T16:52:11.459</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

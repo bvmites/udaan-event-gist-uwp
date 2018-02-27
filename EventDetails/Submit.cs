@@ -14,36 +14,58 @@ namespace EventDetails
 {
     class Submit
     {
-        public async static Task<ResponseObject> PostAsJsonAsync(string uri, Details d)
+        public async static Task<ResponseObject> PostAsJsonAsync(string uri, Details d, string token)
         {
             var itemJson = JsonConvert.SerializeObject(d);
             var content = new StringContent(itemJson);
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            var http = new HttpClient();
+            var authValue = new AuthenticationHeaderValue(token);
+            var http = new HttpClient()
+            {
+                DefaultRequestHeaders = { Authorization = authValue }
+            };
             var response = await http.PostAsync(uri, content);
-            var result = await response.Content.ReadAsStringAsync();
-            var serializer = new DataContractJsonSerializer(typeof(ResponseObject));
+            var status = response.IsSuccessStatusCode;
 
-            var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
-            var data = (ResponseObject)serializer.ReadObject(ms);
-            return data;
+            ResponseObject data = new ResponseObject();
+            if (status == true)
+            {
+                data.status = true;
+                return data;
+            }
+            else
+            {
+                data.status = false;
+                return data;
+            }
         }
 
-        public async static Task<ResponseObject> PostAsJsonAsync(string uri, EditObject d)
+        public async static Task<ResponseObject> PutAsJsonAsync(string uri, EditObject d, string token)
         {
             var itemJson = JsonConvert.SerializeObject(d);
             var content = new StringContent(itemJson);
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            var http = new HttpClient();
+            var authValue = new AuthenticationHeaderValue(token);
+            var http = new HttpClient()
+            {
+                DefaultRequestHeaders = { Authorization = authValue }
+            };
             var response = await http.PutAsync(uri, content);
-            var result = await response.Content.ReadAsStringAsync();
-            var serializer = new DataContractJsonSerializer(typeof(ResponseObject));
+            var status = response.IsSuccessStatusCode;
 
-            var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
-            var data = (ResponseObject)serializer.ReadObject(ms);
-            return data;
+            ResponseObject data = new ResponseObject();
+            if (status == true)
+            {
+                data.status = true;
+                return data;
+            }
+            else
+            {
+                data.status = false;
+                return data;
+            }
         }
     }
 

@@ -35,22 +35,26 @@ namespace EventDetails
             try
             {
                 User user = new User();
+                RootObject response = new RootObject();
 
-                user.Username = TextBox1.Text;
-                user.Password = PasswordBox1.Password;
-
-                string uri = "http://demo8763462.mockable.io/submit";
-                RootObject response = await Verify.PostAsJsonAsync(uri, user);
-
-                if(response.status != false)
+                if (TextBox1.Text != "" && PasswordBox1.Password != "")
                 {
-                    token = response.token;
-                    this.Frame.Navigate(typeof(Choice), token);
+                    user.username = TextBox1.Text;
+                    user.password = PasswordBox1.Password;
+                    string uri = "http://udaan18-events-api.herokuapp.com/users/login";
+                    response = await Verify.PostAsJsonAsync(uri, user);
+                    if (response.token != "Invalid")
+                    {
+                        token = response.token;
+                        this.Frame.Navigate(typeof(Choice), token);
+                    }
+                    else
+                    {
+                        Invalid.Visibility = Visibility.Visible;
+                    }
                 }
                 else
-                {
                     Invalid.Visibility = Visibility.Visible;
-                }
             }
             catch(Exception ex)
             {

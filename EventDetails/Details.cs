@@ -14,13 +14,13 @@ namespace EventDetails
 
     public class Details
     {
-        public string name { get; set; }
-        public string type { get; set; }
+        public string eventName { get; set; }
+        public string eventType { get; set; }
         public string department { get; set; }
         public string tagline { get; set; }
         public string description { get; set; }
         public int teamSize { get; set; }
-        public int fees { get; set; }
+        public int price { get; set; }
         public List<Managers> managers { get; set; }
         public List<string> rounds { get; set; }
     }

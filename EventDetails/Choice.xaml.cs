@@ -26,7 +26,7 @@ namespace EventDetails
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            //token = e.Parameter.ToString();
+            token = e.Parameter.ToString();
         }
 
         private void register_Click(object sender, RoutedEventArgs e)
@@ -39,7 +39,12 @@ namespace EventDetails
             try
             {
                 List<EditObject> obj = await EditDetails.GetDetails(token);
-                this.Frame.Navigate(typeof(EventSelect), obj);
+                Data d = new Data();
+                d.obj = obj;
+                d.token = token;
+
+                if(obj != null)
+                    this.Frame.Navigate(typeof(EventSelect), d);
             }
             catch(Exception ex)
             {
@@ -51,5 +56,11 @@ namespace EventDetails
         {
             this.Frame.Navigate(typeof(MainPage));
         }
+    }
+
+    public class Data
+    {
+        public List<EditObject> obj { get; set; }
+        public string token { get; set; }
     }
 }

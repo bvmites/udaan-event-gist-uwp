@@ -16,20 +16,27 @@ namespace EventDetails
     {
         public async static Task<List<EditObject>> GetDetails(string token)
         {
-            var itemJson = JsonConvert.SerializeObject(token);
-            var content = new StringContent(itemJson);
-            content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+            var authValue = new AuthenticationHeaderValue(token);
+            var http = new HttpClient()
+            {
+                DefaultRequestHeaders = {Authorization = authValue}
+            };
+            string url = "http://udaan18-events-api.herokuapp.com/events";
+            var response = await http.GetAsync(url);
+            var status = response.IsSuccessStatusCode;
 
-            var http = new HttpClient();
-            string url = "http://demo5369589.mockable.io/edit";
-            var response = await http.PostAsync(url,content);
-            var result = await response.Content.ReadAsStringAsync();
-            var serializer = new DataContractJsonSerializer(typeof(List<EditObject>));
+            if (status == true)
+            {
+                var result = await response.Content.ReadAsStringAsync();
+                var serializer = new DataContractJsonSerializer(typeof(List<EditObject>));
 
-            var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
-            var data = (List<EditObject>)serializer.ReadObject(ms);
+                var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
+                var data = (List<EditObject>)serializer.ReadObject(ms);
 
-            return data;
+                return data;
+            }
+            else
+                return null;
         }
     }
 
@@ -41,24 +48,19 @@ namespace EventDetails
 
         [DataMember]
         public string phone { get; set; }
-
-        public static implicit operator Manager(List<Manager> v)
-        {
-            throw new NotImplementedException();
-        }
     }
 
     [DataContract]
     public class EditObject
     {
         [DataMember]
-        public string id { get; set; }
+        public string _id { get; set; }
 
         [DataMember]
-        public string name { get; set; }
+        public string eventName { get; set; }
 
         [DataMember]
-        public string type { get; set; }
+        public string eventType { get; set; }
 
         [DataMember]
         public string department { get; set; }
@@ -73,7 +75,7 @@ namespace EventDetails
         public int teamSize { get; set; }
 
         [DataMember]
-        public int fees { get; set; }
+        public int price { get; set; }
 
         [DataMember]
         public List<Manager> managers { get; set; }

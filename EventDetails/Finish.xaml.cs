@@ -17,9 +17,16 @@ namespace EventDetails
 {
     public sealed partial class Finish : Page
     {
+        public string token;
+
         public Finish()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            token = e.Parameter.ToString();
         }
 
         private void logoutbutton_Click(object sender, RoutedEventArgs e)
@@ -29,7 +36,7 @@ namespace EventDetails
 
         private void Again_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Choice));
+            this.Frame.Navigate(typeof(Choice), token);
         }
     }
 }

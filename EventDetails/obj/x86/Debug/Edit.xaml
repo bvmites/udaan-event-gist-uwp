@@ -10,7 +10,7 @@
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
         <StackPanel MinWidth="1280" Background="{ThemeResource SystemControlAcrylicWindowMediumHighBrush}">
             <RelativePanel Background="{StaticResource SystemControlBackgroundAccentBrush}">
-                <Button x:ConnectionId='20' 
+                <Button x:ConnectionId='21' 
                     x:Name="BackButton" 
                     RelativePanel.AlignLeftWithPanel="True" 
                     Content="&#xE0A6;" 
@@ -18,7 +18,7 @@
                     FontSize="20"
                     Background="{StaticResource SystemControlBackgroundAltMediumBrush}"
                                              />
-                <Button x:ConnectionId='21' 
+                <Button x:ConnectionId='22' 
                     x:Name="LogOutButton" 
                     RelativePanel.AlignRightWithPanel="True" 
                     Content="Log out" 
@@ -59,7 +59,7 @@
                                 VerticalAlignment="Stretch" 
                                 HorizontalAlignment="Left"
                                 Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
-                            <ComboBox x:ConnectionId='19'
+                            <ComboBox x:ConnectionId='20'
                                 x:Name="Type"
                                 Grid.Row="1"
                                 VerticalAlignment="Stretch"
@@ -79,7 +79,7 @@
                                 VerticalAlignment="Stretch" 
                                 HorizontalAlignment="Left" 
                                 Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
-                            <ComboBox x:ConnectionId='18'
+                            <ComboBox x:ConnectionId='19'
                                 x:Name="Department"
                                 Grid.Row="1"
                                 VerticalAlignment="Stretch"
@@ -104,10 +104,10 @@
                         HorizontalAlignment="Left" 
                         Grid.Row="2"
                         Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
-                    <TextBox x:ConnectionId='14'
+                    <TextBox x:ConnectionId='15'
                         x:Name="TextBox1" 
                         Margin="0,10,0,0" 
-                        VerticalAlignment="Stretch" 
+                        VerticalAlignment="Stretch"
                         HorizontalAlignment="Stretch"
                         Grid.Row="3" 
                         Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
@@ -119,7 +119,7 @@
                         HorizontalAlignment="Left" 
                         Grid.Row="4" 
                         Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
-                    <TextBox x:ConnectionId='15'
+                    <TextBox x:ConnectionId='16'
                         x:Name="TextBox2" 
                         Margin="0,10,0,0" 
                         VerticalAlignment="Stretch" 
@@ -134,7 +134,7 @@
                         HorizontalAlignment="Left" 
                         Grid.Row="6" 
                         Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
-                    <TextBox x:ConnectionId='16'
+                    <TextBox x:ConnectionId='17'
                         x:Name="TextBox3" 
                         Margin="0,10,0,0" 
                         VerticalAlignment="Stretch"
@@ -144,14 +144,14 @@
                         TextWrapping="Wrap" 
                         Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                     <TextBlock 
-                        Text="Number of Participants" 
+                        Text="Participants Per Team" 
                         Margin="0,20,0,0"
                         FontSize="20" 
                         VerticalAlignment="Stretch" 
                         HorizontalAlignment="Left" 
                         Grid.Row="8"
                         Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
-                    <TextBox x:ConnectionId='17'
+                    <TextBox x:ConnectionId='18'
                         x:Name="TextBox4" 
                         Margin="0,10,0,0" 
                         VerticalAlignment="Stretch"
@@ -169,7 +169,7 @@
                             HorizontalAlignment="Left" 
                             Grid.Row="0"
                             Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
-                        <TextBox x:ConnectionId='13'
+                        <TextBox x:ConnectionId='14'
                             x:Name="TextBox5" 
                             Margin="0,10,0,0" 
                             VerticalAlignment="Stretch" 
@@ -184,21 +184,21 @@
                         VerticalAlignment="Stretch" 
                         HorizontalAlignment="Left" 
                         Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
-                    <StackPanel x:ConnectionId='7' x:Name="Manager"  HorizontalAlignment="Stretch">
+                    <StackPanel x:ConnectionId='8' x:Name="Manager"  HorizontalAlignment="Stretch">
                         <TextBlock 
                             Margin="0,10,0,0"
                             Text="Manager 1" 
                             VerticalAlignment="Stretch" 
                             HorizontalAlignment="Left"
                             Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
-                        <TextBox x:ConnectionId='11'
+                        <TextBox x:ConnectionId='12'
                             x:Name="TextBox6" 
                             Margin="0,10,0,0"
                             PlaceholderText="Name"
                             VerticalAlignment="Stretch" 
                             HorizontalAlignment="Stretch" 
                             Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
-                        <TextBox x:ConnectionId='12'
+                        <TextBox x:ConnectionId='13'
                             x:Name="TextBox7" 
                             PlaceholderText="Phone Number"
                             Margin="0,10,0,0" 
@@ -207,7 +207,7 @@
                             Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button x:ConnectionId='9' 
+                        <Button x:ConnectionId='10' 
                             Name="addManager" 
                             Margin="0,20,20,0" 
                             VerticalAlignment="Stretch"
@@ -216,7 +216,7 @@
                             Background="{StaticResource SystemControlBackgroundAccentBrush}" >
                             Add Manager
                         </Button>
-                        <Button x:ConnectionId='10' 
+                        <Button x:ConnectionId='11' 
                             Name="removeManager" 
                             Margin="20,20,0,0"
                             VerticalAlignment="Stretch"
@@ -226,7 +226,7 @@
                             Remove Manager
                         </Button>
                     </StackPanel>
-                    <TextBlock x:ConnectionId='8' 
+                    <TextBlock x:ConnectionId='9' 
                         Name="Warning1" 
                         Margin="0,10,0,0" 
                         Visibility="Collapsed"
@@ -240,7 +240,7 @@
                             VerticalAlignment="Stretch" 
                             HorizontalAlignment="Left"
                             Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
-                        <TextBox x:ConnectionId='6'
+                        <TextBox x:ConnectionId='7'
                             x:Name="TextBox8" 
                             Margin="0,10,0,0" 
                             VerticalAlignment="Stretch" 
@@ -250,7 +250,7 @@
                             Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
-                        <Button x:ConnectionId='4' 
+                        <Button x:ConnectionId='5' 
                             Name="AddRound" 
                             Margin="0,0,0,0"
                             VerticalAlignment="Stretch"
@@ -259,7 +259,7 @@
                             Background="{StaticResource SystemControlBackgroundAccentBrush}" >
                             Add Round
                         </Button>
-                        <Button x:ConnectionId='5' 
+                        <Button x:ConnectionId='6' 
                             Name="RemoveRound" 
                             Margin="40,0,0,0"
                             VerticalAlignment="Stretch"
@@ -283,6 +283,13 @@
                         HorizontalAlignment="Center" 
                                              
                         Background="{StaticResource SystemControlBackgroundAccentBrush}" />
+                    <TextBlock x:ConnectionId='4'
+                        x:Name="Invalid"
+                        Visibility="Collapsed"
+                        Margin="0,10,0,0"
+                        Foreground="{StaticResource SystemControlBackgroundAccentBrush}"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Stretch"/>
                 </StackPanel>
             </Grid>
         </StackPanel>

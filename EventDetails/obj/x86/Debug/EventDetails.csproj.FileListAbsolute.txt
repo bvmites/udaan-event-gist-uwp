@@ -731,3 +731,6 @@ C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debu
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\Finish.xaml
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\Finish.xbf
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\Finish.xbf
+C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.dll

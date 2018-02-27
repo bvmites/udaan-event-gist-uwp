@@ -10,20 +10,31 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <RelativePanel Background="{StaticResource SystemControlBackgroundAccentBrush}">
-            <Button x:ConnectionId='2' 
+            <Button x:ConnectionId='3' 
                 x:Name="LogOutButton" 
                 RelativePanel.AlignRightWithPanel="True"
                 Background="{StaticResource SystemControlBackgroundAltMediumBrush}"
                 Content="Log out"
                                           />
         </RelativePanel>
-        <Button x:ConnectionId='1' 
+        <TextBlock x:ConnectionId='1' 
+            x:Name="SuccessMessage"
+            Grid.Row="1"
+            Margin="0,300,0,10"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Foreground="{StaticResource SystemControlBackgroundAccentBrush}"
+            Visibility="Visible"
+            Text="Response submitted successfully..!"/>
+        <Button x:ConnectionId='2' 
             x:Name="Again" 
                                 
-            Grid.Row="1" 
+            Grid.Row="2" 
             VerticalAlignment="Center" 
             HorizontalAlignment="Center"
             Background="{StaticResource SystemControlBackgroundAccentBrush}"

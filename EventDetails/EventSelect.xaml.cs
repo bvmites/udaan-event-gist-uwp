@@ -17,7 +17,10 @@ namespace EventDetails
 {
     public sealed partial class EventSelect : Page
     {
+        public Data d;
         public List<EditObject> obj;
+        public string token;
+
         public EventSelect()
         {
             this.InitializeComponent();
@@ -25,12 +28,15 @@ namespace EventDetails
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            obj = (List<EditObject>)e.Parameter;
+            d = (Data)e.Parameter;
+            obj = d.obj;
+            token = d.token.ToString();
+
             int count = obj.Count;
 
             for(int i = 0; i<count; i++)
             {
-                EventList.Items.Add(obj[i].name.ToString());
+                EventList.Items.Add(obj[i].eventName.ToString());
             }
         }
 
@@ -40,7 +46,10 @@ namespace EventDetails
             { 
                 int index = EventList.SelectedIndex;
                 EditObject obj1 = obj[index];
-                this.Frame.Navigate(typeof(Edit), obj1);
+                SelectedEvent s = new SelectedEvent();
+                s.obj = obj1;
+                s.token = token;
+                this.Frame.Navigate(typeof(Edit), s);
             }   
         }
 
@@ -51,7 +60,13 @@ namespace EventDetails
 
         public void backbutton_click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Choice));
+            this.Frame.Navigate(typeof(Choice), token);
         }
+    }
+
+    public class SelectedEvent
+    {
+        public EditObject obj { get; set; }
+        public string token { get; set; }
     }
 }

@@ -20,23 +20,30 @@ namespace EventDetails
             var content = new StringContent(itemJson);
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            var http = new HttpClient();
+            var http = new HttpClient();            
             var response = await http.PostAsync(uri, content);
-            var result = await response.Content.ReadAsStringAsync();
-            var serializer = new DataContractJsonSerializer(typeof(RootObject));
+            var status = response.IsSuccessStatusCode;
+            RootObject data = new RootObject();
+            if (status != false)
+            {
+                var result = await response.Content.ReadAsStringAsync();
+                var serializer = new DataContractJsonSerializer(typeof(RootObject));
 
-            var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
-            var data = (RootObject)serializer.ReadObject(ms);
-            return data;
+                var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
+                data = (RootObject)serializer.ReadObject(ms);
+                return data;
+            }
+            else
+            {
+                data.token = "Invalid";
+                return data;
+            }
         }
     }
 
     [DataContract]
     public class RootObject
     {
-        [DataMember]
-        public bool status { get; set; }
-
         [DataMember]
         public string token { get; set; }
     }
