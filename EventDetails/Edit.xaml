@@ -176,6 +176,30 @@
                             HorizontalAlignment="Stretch"
                             Grid.Row="1"
                             Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
+                        <TextBlock
+                            Margin=" 0,20,0,0"
+                            Text="Prize" 
+                            FontSize="20" 
+                            VerticalAlignment="Stretch" 
+                            HorizontalAlignment="Left" 
+                            Grid.Row="0"
+                            Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
+                        <TextBox
+                            x:Name="Winner" 
+                            Margin="0,10,0,0" 
+                            VerticalAlignment="Stretch" 
+                            HorizontalAlignment="Stretch"
+                            Grid.Row="1"
+                            PlaceholderText="Prize for Winner"
+                            Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
+                        <TextBox
+                            x:Name="Runner_Up" 
+                            Margin="0,10,0,0" 
+                            VerticalAlignment="Stretch" 
+                            HorizontalAlignment="Stretch"
+                            Grid.Row="1"
+                            PlaceholderText="Prize for Runner Up"
+                            Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                     </StackPanel>
                     <TextBlock 
                         Margin="0,20,0,0"

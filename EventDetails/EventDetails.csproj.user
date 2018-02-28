@@ -7,4 +7,14 @@
     <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>
     <UseEmulator>true</UseEmulator>
   </PropertyGroup>
+  <PropertyGroup>
+    <Source>C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\windows-logo.png</Source>
+    <SmallTileSource>C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\windows-logo.png</SmallTileSource>
+    <MediumTileSource>C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\windows-logo.png</MediumTileSource>
+    <WideTileSource>C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\windows-logo.png</WideTileSource>
+    <LargeTileSource>C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\windows-logo.png</LargeTileSource>
+    <AppIconSource>C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\windows-logo.png</AppIconSource>
+    <SplashScreenSource>C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\windows-logo.png</SplashScreenSource>
+    <PackageLogoSource>C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\windows-logo.png</PackageLogoSource>
+  </PropertyGroup>
 </Project>

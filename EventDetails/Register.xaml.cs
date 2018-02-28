@@ -193,8 +193,20 @@ namespace EventDetails
                 d.tagline = TextBox2.Text.ToString();
                 d.description = TextBox3.Text.ToString();
                 d.teamSize = Convert.ToInt32(TextBox4.Text);
-                d.price = Convert.ToInt32(TextBox5.Text);
-                
+                d.entryFee = Convert.ToInt32(TextBox5.Text);
+
+                ArrayList prize = new ArrayList();
+                prize.Add(Winner.Text.ToString());
+                prize.Add(Runner_Up.Text.ToString());
+
+                d.prizeMoney = new List<int>();
+                int p_Count = 0;
+                while(p_Count < prize.Count)
+                {
+                    d.prizeMoney.Add(Convert.ToInt32(prize[p_Count]));
+                    p_Count++;
+                }
+
                 ArrayList names = new ArrayList();
                 ArrayList phone = new ArrayList();
                 ArrayList round = new ArrayList();

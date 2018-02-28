@@ -63,7 +63,10 @@ namespace EventDetails
             TextBox2.Text = obj.tagline.ToString();
             TextBox3.Text = obj.description.ToString();
             TextBox4.Text = obj.teamSize.ToString();
-            TextBox5.Text = obj.price.ToString();
+            TextBox5.Text = obj.entryFee.ToString();
+            List<int> prizeList = obj.prizeMoney.ToList();
+            Winner.Text = prizeList[0].ToString();
+            Runner_Up.Text = prizeList[1].ToString();
 
             List<Manager> m1 = obj.managers.ToList();
 
@@ -296,7 +299,19 @@ namespace EventDetails
                 d.tagline = TextBox2.Text.ToString();
                 d.description = TextBox3.Text.ToString();
                 d.teamSize = Convert.ToInt32(TextBox4.Text);
-                d.price = Convert.ToInt32(TextBox5.Text);
+                d.entryFee = Convert.ToInt32(TextBox5.Text);
+
+                ArrayList prize = new ArrayList();
+                prize.Add(Winner.Text.ToString());
+                prize.Add(Runner_Up.Text.ToString());
+
+                d.prizeMoney = new List<int>();
+                int p_Count = 0;
+                while (p_Count < prize.Count)
+                {
+                    d.prizeMoney.Add(Convert.ToInt32(prize[p_Count]));
+                    p_Count++;
+                }
 
                 ArrayList names = new ArrayList();
                 ArrayList phone = new ArrayList();

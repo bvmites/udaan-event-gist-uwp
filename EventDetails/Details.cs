@@ -20,7 +20,8 @@ namespace EventDetails
         public string tagline { get; set; }
         public string description { get; set; }
         public int teamSize { get; set; }
-        public int price { get; set; }
+        public int entryFee { get; set; }
+        public List<int> prizeMoney { get; set; }
         public List<Managers> managers { get; set; }
         public List<string> rounds { get; set; }
     }

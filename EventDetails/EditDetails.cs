@@ -75,7 +75,10 @@ namespace EventDetails
         public int teamSize { get; set; }
 
         [DataMember]
-        public int price { get; set; }
+        public int entryFee { get; set; }
+
+        [DataMember]
+        public List<int> prizeMoney { get; set; }
 
         [DataMember]
         public List<Manager> managers { get; set; }
