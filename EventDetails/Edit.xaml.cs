@@ -285,6 +285,7 @@ namespace EventDetails
         {
             try
             {
+                submit.IsEnabled = false;
                 Invalid.Visibility = Visibility.Collapsed;
                 EditObject d = new EditObject();
                 d.eventName = TextBox1.Text.ToString();
@@ -382,12 +383,14 @@ namespace EventDetails
                 {
                     Invalid.Text = "Submission unsuccessfull. (Are you missing any field..?)";
                     Invalid.Visibility = Visibility.Visible;
+                    submit.IsEnabled = true;
                 }
             }
             catch (Exception ex)
             {
                 Invalid.Text = "Each field is complusory..!";
                 Invalid.Visibility = Visibility.Visible;
+                submit.IsEnabled = true;
             }
         }
 

@@ -28,6 +28,7 @@ namespace EventDetails
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            No_Events.Visibility = Visibility.Collapsed;
             d = (Data)e.Parameter;
             obj = d.obj;
             token = d.token.ToString();
@@ -43,14 +44,17 @@ namespace EventDetails
         private void Modify_Click(object sender, RoutedEventArgs e)
         {
             if(EventList.SelectedIndex >= 0)
-            { 
+            {
+                No_Events.Visibility = Visibility.Collapsed;
                 int index = EventList.SelectedIndex;
                 EditObject obj1 = obj[index];
                 SelectedEvent s = new SelectedEvent();
                 s.obj = obj1;
                 s.token = token;
                 this.Frame.Navigate(typeof(Edit), s);
-            }   
+            }
+            else
+                No_Events.Visibility = Visibility.Visible;
         }
 
         public void logoutbutton_click(object sender, RoutedEventArgs e)

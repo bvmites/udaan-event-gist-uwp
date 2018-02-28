@@ -34,6 +34,8 @@ namespace EventDetails
         {
             try
             {
+                Button.IsEnabled = false;
+                Invalid.Visibility = Visibility.Collapsed;
                 User user = new User();
                 RootObject response = new RootObject();
 
@@ -54,11 +56,13 @@ namespace EventDetails
                     }
                 }
                 else
+                    Button.IsEnabled = true;
                     Invalid.Visibility = Visibility.Visible;
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex);
+                Button.IsEnabled = true;
+                Invalid.Visibility = Visibility.Visible;
             }
         }
     }

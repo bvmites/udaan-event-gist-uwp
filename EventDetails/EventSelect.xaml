@@ -45,6 +45,13 @@
                 Background="{StaticResource SystemControlBackgroundAccentBrush}"
                 VerticalAlignment="Stretch"
                 HorizontalAlignment="Stretch" />
+            <TextBlock
+                x:Name="No_Events"
+                Text="Please select the event you want to edit..!" 
+                Visibility="Collapsed"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0,10,0,0"/>
         </StackPanel>
     </StackPanel>
 </Page>

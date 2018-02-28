@@ -26,11 +26,13 @@ namespace EventDetails
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            No_Events.Visibility = Visibility.Collapsed;
             token = e.Parameter.ToString();
         }
 
         private void register_Click(object sender, RoutedEventArgs e)
         {
+            No_Events.Visibility = Visibility.Collapsed;
             this.Frame.Navigate(typeof(Register), token);
         }
 
@@ -38,17 +40,20 @@ namespace EventDetails
         {
             try
             {
+                No_Events.Visibility = Visibility.Collapsed;
                 List<EditObject> obj = await EditDetails.GetDetails(token);
                 Data d = new Data();
                 d.obj = obj;
                 d.token = token;
 
-                if(obj != null)
+                if (obj.Count > 0)
                     this.Frame.Navigate(typeof(EventSelect), d);
+                else
+                    No_Events.Visibility = Visibility.Visible;
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex);
+                No_Events.Visibility = Visibility.Visible;
             }
         }
 

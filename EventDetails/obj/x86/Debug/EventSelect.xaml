@@ -10,7 +10,7 @@
 
     <StackPanel>
         <RelativePanel Background="{StaticResource SystemControlBackgroundAccentBrush}">
-            <Button x:ConnectionId='3' 
+            <Button x:ConnectionId='4' 
                 x:Name="BackButton" 
                 RelativePanel.AlignLeftWithPanel="True" 
                 Content="&#xE0A6;"
@@ -18,7 +18,7 @@
                 FontFamily="Segoe MDL2 Assets"
                 Background="{StaticResource SystemControlBackgroundAltMediumBrush}"
                                          />
-            <Button x:ConnectionId='4' 
+            <Button x:ConnectionId='5' 
                 x:Name="LogOutButton" 
                 RelativePanel.AlignRightWithPanel="True" 
                 Content="Log out" 
@@ -45,6 +45,13 @@
                 Background="{StaticResource SystemControlBackgroundAccentBrush}"
                 VerticalAlignment="Stretch"
                 HorizontalAlignment="Stretch" />
+            <TextBlock x:ConnectionId='3'
+                x:Name="No_Events"
+                Text="Please select the event you want to edit..!" 
+                Visibility="Collapsed"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0,10,0,0"/>
         </StackPanel>
     </StackPanel>
 </Page>
