@@ -54,9 +54,19 @@ namespace EventDetails
                 Type.SelectedIndex = 1;
                 Department.IsEnabled = false;
             }
-            else
+            else if (obj.eventType == "Cultural")
             {
                 Type.SelectedIndex = 2;
+                Department.IsEnabled = false;
+            }
+            else if(obj.eventType == "Treasure_Hunt")
+            {
+                Type.SelectedIndex = 3;
+                Department.IsEnabled = false;
+            }
+            else
+            {
+                Type.SelectedIndex = 4;
                 Department.IsEnabled = false;
             }
             TextBox1.Text = obj.eventName.ToString();
@@ -285,6 +295,7 @@ namespace EventDetails
         {
             try
             {
+                Ring.IsActive = true;
                 submit.IsEnabled = false;
                 Invalid.Visibility = Visibility.Collapsed;
                 EditObject d = new EditObject();
@@ -378,9 +389,13 @@ namespace EventDetails
                 ResponseObject response = await Submit.PutAsJsonAsync(uri, d, token);
 
                 if (response.status == true)
+                {
+                    Ring.IsActive = false;
                     this.Frame.Navigate(typeof(Finish), token);
+                }
                 else
                 {
+                    Ring.IsActive = false;
                     Invalid.Text = "Submission unsuccessfull. (Are you missing any field..?)";
                     Invalid.Visibility = Visibility.Visible;
                     submit.IsEnabled = true;
@@ -388,6 +403,7 @@ namespace EventDetails
             }
             catch (Exception ex)
             {
+                Ring.IsActive = false;
                 Invalid.Text = "Each field is complusory..!";
                 Invalid.Visibility = Visibility.Visible;
                 submit.IsEnabled = true;

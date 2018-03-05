@@ -180,6 +180,7 @@ namespace EventDetails
         {
             try
             {
+                Ring.IsActive = true;
                 submit.IsEnabled = false;
                 Invalid.Visibility = Visibility.Collapsed;
                 Details d = new Details();
@@ -269,9 +270,13 @@ namespace EventDetails
                 ResponseObject response = await Submit.PostAsJsonAsync(uri, d, token);
 
                 if (response.status == true)
+                {
                     this.Frame.Navigate(typeof(Finish), token);
+                    Ring.IsActive = false;
+                }
                 else
                 {
+                    Ring.IsActive = false;
                     Invalid.Text = "Submission unsuccessfull. (Are you missing any field..?)";
                     Invalid.Visibility = Visibility.Visible;
                     submit.IsEnabled = true;
@@ -279,6 +284,7 @@ namespace EventDetails
             }
             catch(Exception ex)
             {
+                Ring.IsActive = false;
                 Invalid.Text = "Each field is complusory with respective type..!";
                 Invalid.Visibility = Visibility.Visible;
                 submit.IsEnabled = true;

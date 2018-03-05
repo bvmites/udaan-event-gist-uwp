@@ -10,7 +10,7 @@
 
     <StackPanel>
         <RelativePanel Background="{StaticResource SystemControlBackgroundAccentBrush}">
-            <Button x:ConnectionId='4' 
+            <Button x:ConnectionId='5' 
                 x:Name="LogOutButton" 
                 RelativePanel.AlignRightWithPanel="True" 
                 Background="{StaticResource SystemControlBackgroundAltMediumBrush}"
@@ -44,7 +44,7 @@
                 Margin="0,10,0,0"
                 FontSize="20"/>
             <TextBlock
-                Text="4. If any detail you don't know while submitting or editting event then add 00000 in that field."
+                Text="4. If any detail you don't know while submitting or editting event then add 77777 in that field."
                 HorizontalAlignment="Center"
                 VerticalAlignment="Stretch"
                 Margin="0,10,0,0"
@@ -57,7 +57,7 @@
                 FontSize="20"/>
         </StackPanel>
         <StackPanel Margin="0,20,0,0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button x:ConnectionId='2' 
+            <Button x:ConnectionId='3' 
                 Name="register" 
                 Height="50"
                 Width="200" 
@@ -68,7 +68,7 @@
                                        />
             <Line Stretch="Fill" Margin="0,30,5,0" Height="150" Stroke="{StaticResource SystemControlBackgroundAccentBrush}" X1="0" Y1="0" X2="0" Y2="1"/>
             <Line Stretch="Fill" Margin="5,30,0,0" Height="150" Stroke="{StaticResource SystemControlBackgroundAccentBrush}" X1="0" Y1="0" X2="0" Y2="1"/>
-            <Button x:ConnectionId='3' 
+            <Button x:ConnectionId='4' 
                     Name="edit" 
                     Width="200"
                     Height="50"
@@ -85,6 +85,11 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Margin="0,10,0,0"/>
+        <ProgressRing x:ConnectionId='2' 
+            x:Name="Ring"
+            HorizontalAlignment="Center"
+            VerticalAlignment ="Center"
+            Margin="0,20,0,0"/>
     </StackPanel>
 </Page>
 

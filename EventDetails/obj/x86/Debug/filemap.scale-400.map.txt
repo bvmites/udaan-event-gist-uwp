@@ -1,0 +1,14 @@
+﻿[ResourceMetadata]
+"ResourceId"			"filemap.scale-400"
+"ResourceDimensions"		"scale-400"
+
+[Files]
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\filemap.scale-400.pri"			"resources.pri"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\PackageLayout\Assets\WideTile.scale-400.png"			"Assets\WideTile.scale-400.png"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\PackageLayout\Assets\SplashScreen.scale-400.png"			"Assets\SplashScreen.scale-400.png"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\PackageLayout\Assets\SmallTile.scale-400.png"			"Assets\SmallTile.scale-400.png"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\PackageLayout\Assets\PackageLogo.scale-400.png"			"Assets\PackageLogo.scale-400.png"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\PackageLayout\Assets\MediumTile.scale-400.png"			"Assets\MediumTile.scale-400.png"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\PackageLayout\Assets\LArgeTile.scale-400.png"			"Assets\LArgeTile.scale-400.png"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\PackageLayout\Assets\BadgeLogo.scale-400.png"			"Assets\BadgeLogo.scale-400.png"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\x86\Debug\PackageLayout\Assets\AppICon.scale-400.png"			"Assets\AppICon.scale-400.png"

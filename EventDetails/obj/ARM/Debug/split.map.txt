@@ -1,0 +1,17 @@
+﻿[ResourceMetadata]
+"ResourceDimensions"		"scale-200"
+"ResourceDimensions"		"language-en-us"
+
+[Files]
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\ARM\Debug\split.pri"			"resources.pri"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\ARM\Debug\PackageLayout\WinMetadata\Windows.winmd"			"WinMetadata\Windows.winmd"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\ARM\Debug\PackageLayout\Properties\Default.rd.xml"			"Properties\Default.rd.xml"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\ARM\Debug\PackageLayout\EventDetails.xr.xml"			"EventDetails.xr.xml"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\ARM\Debug\PackageLayout\Assets\WideTile.scale-200.png"			"Assets\WideTile.scale-200.png"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\ARM\Debug\PackageLayout\Assets\SplashScreen.scale-200.png"			"Assets\SplashScreen.scale-200.png"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\ARM\Debug\PackageLayout\Assets\SmallTile.scale-200.png"			"Assets\SmallTile.scale-200.png"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\ARM\Debug\PackageLayout\Assets\PackageLogo.scale-200.png"			"Assets\PackageLogo.scale-200.png"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\ARM\Debug\PackageLayout\Assets\MediumTile.scale-200.png"			"Assets\MediumTile.scale-200.png"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\ARM\Debug\PackageLayout\Assets\LArgeTile.scale-200.png"			"Assets\LArgeTile.scale-200.png"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\ARM\Debug\PackageLayout\Assets\BadgeLogo.scale-200.png"			"Assets\BadgeLogo.scale-200.png"
+"C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\ARM\Debug\PackageLayout\Assets\AppICon.scale-200.png"			"Assets\AppICon.scale-200.png"

@@ -34,6 +34,7 @@ namespace EventDetails
         {
             try
             {
+                Ring.IsActive = true;
                 Button.IsEnabled = false;
                 Invalid.Visibility = Visibility.Collapsed;
                 User user = new User();
@@ -52,15 +53,19 @@ namespace EventDetails
                     }
                     else
                     {
+                        Ring.IsActive = false;
                         Invalid.Visibility = Visibility.Visible;
+                        Button.IsEnabled = true;
                     }
                 }
                 else
+                    Ring.IsActive = false;
                     Button.IsEnabled = true;
                     Invalid.Visibility = Visibility.Visible;
             }
             catch(Exception ex)
             {
+                Ring.IsActive = false;
                 Button.IsEnabled = true;
                 Invalid.Visibility = Visibility.Visible;
             }

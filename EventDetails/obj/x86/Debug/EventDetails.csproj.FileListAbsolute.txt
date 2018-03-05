@@ -734,3 +734,4 @@ C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debu
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\Microsoft.IdentityModel.Logging.dll
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\Microsoft.IdentityModel.Tokens.dll
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\Core\ForBundle\AppxManifest.xml
