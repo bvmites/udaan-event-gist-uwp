@@ -43,8 +43,10 @@ namespace EventDetails
 
         private void Modify_Click(object sender, RoutedEventArgs e)
         {
-            if(EventList.SelectedIndex >= 0)
+            Ring.IsActive = true;
+            if (EventList.SelectedIndex >= 0)
             {
+                Ring.IsActive = false;
                 No_Events.Visibility = Visibility.Collapsed;
                 int index = EventList.SelectedIndex;
                 EditObject obj1 = obj[index];
@@ -54,7 +56,10 @@ namespace EventDetails
                 this.Frame.Navigate(typeof(Edit), s);
             }
             else
+            {
+                Ring.IsActive = false;
                 No_Events.Visibility = Visibility.Visible;
+            }
         }
 
         public void logoutbutton_click(object sender, RoutedEventArgs e)

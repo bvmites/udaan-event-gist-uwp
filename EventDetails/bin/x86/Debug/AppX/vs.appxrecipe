@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>86502112C075FD36082818AB631061A773A970624F4BB95DDB12398FB1270CF3</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>34C1D4965E8A9ED41B65CD194F3D04D024F32D9E1D2C7EEE3A7B90AEB30FC992</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>cd723863-7491-4df9-90f6-20542a5d05ff_1.0.0.0_x86__mh2jd6520dhr4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>cd723863-7491-4df9-90f6-20542a5d05ff_mh2jd6520dhr4!App</RegisteredUserModeAppID>
     <RegisteredPackageID>cd723863-7491-4df9-90f6-20542a5d05ff</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-28T12:08:32.324</Modified>
+      <Modified>2018-03-05T05:28:11.782</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\EventDetails.exe">
       <PackagePath>entrypoint\EventDetails.exe</PackagePath>
-      <Modified>2018-02-28T12:08:27.951</Modified>
+      <Modified>2018-03-05T05:28:05.334</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -539,40 +539,80 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-11-04T23:27:36.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\AppICon.scale-200.png">
+      <PackagePath>Assets\AppICon.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-02-28T13:06:53.747</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\AppICon.scale-400.png">
       <PackagePath>Assets\AppICon.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-02-28T07:31:48.963</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\BadgeLogo.scale-200.png">
+      <PackagePath>Assets\BadgeLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-02-28T13:08:47.538</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\BadgeLogo.scale-400.png">
       <PackagePath>Assets\BadgeLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-02-28T08:05:40.002</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\LArgeTile.scale-200.png">
+      <PackagePath>Assets\LArgeTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-02-28T13:06:16.351</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\LArgeTile.scale-400.png">
       <PackagePath>Assets\LArgeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-02-28T08:18:39.792</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\MediumTile.scale-200.png">
+      <PackagePath>Assets\MediumTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-02-28T13:02:30.493</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\MediumTile.scale-400.png">
       <PackagePath>Assets\MediumTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-02-28T07:29:17.395</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\PackageLogo.scale-200.png">
+      <PackagePath>Assets\PackageLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-02-28T13:09:19.917</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\PackageLogo.scale-400.png">
       <PackagePath>Assets\PackageLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-02-28T07:52:56.798</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\SmallTile.scale-200.png">
+      <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-02-28T13:01:41.676</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-02-28T07:25:07.004</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-02-28T13:08:00.001</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-02-28T08:15:36.926</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\WideTile.scale-200.png">
+      <PackagePath>Assets\WideTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-02-28T13:04:49.463</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\Assets\WideTile.scale-400.png">
       <PackagePath>Assets\WideTile.scale-400.png</PackagePath>
@@ -585,7 +625,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\EventDetails.xr.xml">
       <PackagePath>EventDetails.xr.xml</PackagePath>
-      <Modified>2018-02-28T11:58:34.738</Modified>
+      <Modified>2018-03-05T05:16:16.290</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -594,11 +634,11 @@
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-28T12:08:31.469</Modified>
+      <Modified>2018-03-05T05:28:09.362</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\Core\EventDetails.exe">
       <PackagePath>EventDetails.exe</PackagePath>
-      <Modified>2018-02-28T12:08:32.316</Modified>
+      <Modified>2018-03-05T05:28:11.765</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

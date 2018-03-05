@@ -70,7 +70,9 @@
                                 Foreground="{StaticResource SystemControlBackgroundAccentBrush}">
                                 <ComboBoxItem Content="Technical" />
                                 <ComboBoxItem Content="Non-Technical" />
-                                <ComboBoxItem Content="Other"/>
+                                <ComboBoxItem Content="Cultural"/>
+                                <ComboBoxItem Content="Treasure_Hunt"/>
+                                <ComboBoxItem Content="Girls"/>
                             </ComboBox>
                         </StackPanel>
                         <StackPanel Margin="10,0,0,0">
@@ -315,6 +317,11 @@
                         Foreground="{StaticResource SystemControlBackgroundAccentBrush}"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Stretch"/>
+                    <ProgressRing 
+                        x:Name="Ring"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment ="Center"
+                        Margin="0,20,0,0"/>
                 </StackPanel>
             </Grid>
         </StackPanel>

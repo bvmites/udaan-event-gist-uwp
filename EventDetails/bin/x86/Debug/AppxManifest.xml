@@ -24,13 +24,7 @@
     <Application Id="App" Executable="EventDetails.exe" EntryPoint="EventDetails.App">
       <uap:VisualElements DisplayName="EventDetails" Square150x150Logo="Assets\MediumTile.png" Square44x44Logo="Assets\AppIcon.png" Description="EventDetails" BackgroundColor="#522A2A">
         <uap:LockScreen Notification="badge" BadgeLogo="Assets\BadgeLogo.png" />
-        <uap:DefaultTile Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png" Wide310x150Logo="Assets\WideTile.png">
-          <uap:ShowNameOnTiles>
-            <uap:ShowOn Tile="square150x150Logo" />
-            <uap:ShowOn Tile="wide310x150Logo" />
-            <uap:ShowOn Tile="square310x310Logo" />
-          </uap:ShowNameOnTiles>
-        </uap:DefaultTile>
+        <uap:DefaultTile Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png" Wide310x150Logo="Assets\WideTile.png"></uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#FFFFFF" />
       </uap:VisualElements>
     </Application>

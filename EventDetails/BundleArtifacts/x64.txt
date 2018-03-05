@@ -1,0 +1,2 @@
+MainPackage=C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x64\Debug\EventDetails_1.0.0.0_x64_Debug.appx
+SymbolPackage=C:\Users\darsh\source\repos\event-details-registration\EventDetails\AppPackages\EventDetails_1.0.0.0_Debug_Test\EventDetails_1.0.0.0_x64_Debug.appxsym

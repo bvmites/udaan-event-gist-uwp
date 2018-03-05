@@ -40,6 +40,7 @@ namespace EventDetails
         {
             try
             {
+                Ring.IsActive = true;
                 No_Events.Visibility = Visibility.Collapsed;
                 List<EditObject> obj = await EditDetails.GetDetails(token);
                 Data d = new Data();
@@ -47,12 +48,20 @@ namespace EventDetails
                 d.token = token;
 
                 if (obj.Count > 0)
+                {
+                    Ring.IsActive = false;
                     this.Frame.Navigate(typeof(EventSelect), d);
+
+                }
                 else
+                {
+                    Ring.IsActive = false;
                     No_Events.Visibility = Visibility.Visible;
+                }
             }
             catch(Exception ex)
             {
+                Ring.IsActive = false;
                 No_Events.Visibility = Visibility.Visible;
             }
         }
