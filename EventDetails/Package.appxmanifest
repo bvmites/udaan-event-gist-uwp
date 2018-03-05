@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="EventDetails.App">
-      <uap:VisualElements DisplayName="EventDetails" Square150x150Logo="Assets\MediumTile.png" Square44x44Logo="Assets\AppIcon.png" Description="EventDetails" BackgroundColor="#522A2A">
+      <uap:VisualElements DisplayName="UdaanEventGist" Square150x150Logo="Assets\MediumTile.png" Square44x44Logo="Assets\AppIcon.png" Description="UWP app for event gist creation for udaan." BackgroundColor="#522A2A">
         <uap:LockScreen Notification="badge" BadgeLogo="Assets\BadgeLogo.png" />
         <uap:DefaultTile Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png" Wide310x150Logo="Assets\WideTile.png">
         </uap:DefaultTile>
