@@ -56,16 +56,6 @@
       <RootProperty Name="FontFamily" />
       <RootEvent Name="Click" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Shapes.Line">
-      <RootProperty Name="Stretch" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Stroke" />
-      <RootProperty Name="X1" />
-      <RootProperty Name="Y1" />
-      <RootProperty Name="X2" />
-      <RootProperty Name="Y2" />
-    </RootType>
     <RootType FullName="EventDetails.Choice" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="VerticalScrollBarVisibility" />
