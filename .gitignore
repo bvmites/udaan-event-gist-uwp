@@ -1,2 +1,4 @@
 EventDetails\EventDetails_TemporaryKey.pfx
 .vs
+EventDetails\bin
+EventDetails\debug

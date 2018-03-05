@@ -1,1 +1,0 @@
-C:\Users\darsh\source\repos\event-details-registration\EventDetails\EventDetails.csproj;x86
