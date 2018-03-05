@@ -31,13 +31,21 @@
     <AppXManifest Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+<<<<<<< HEAD
       <Modified>2018-03-05T05:54:15.516</Modified>
+=======
+      <Modified>2018-03-05T05:28:11.782</Modified>
+>>>>>>> 1a5276659cb5af59db1c8fdd82256157e933c49b
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\EventDetails.exe">
       <PackagePath>entrypoint\EventDetails.exe</PackagePath>
+<<<<<<< HEAD
       <Modified>2018-03-05T05:54:09.947</Modified>
+=======
+      <Modified>2018-03-05T05:28:05.334</Modified>
+>>>>>>> 1a5276659cb5af59db1c8fdd82256157e933c49b
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -625,7 +633,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\EventDetails.xr.xml">
       <PackagePath>EventDetails.xr.xml</PackagePath>
+<<<<<<< HEAD
       <Modified>2018-03-05T05:54:09.192</Modified>
+=======
+      <Modified>2018-03-05T05:16:16.290</Modified>
+>>>>>>> 1a5276659cb5af59db1c8fdd82256157e933c49b
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -634,11 +646,19 @@
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+<<<<<<< HEAD
       <Modified>2018-03-05T05:54:14.637</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\Core\EventDetails.exe">
       <PackagePath>EventDetails.exe</PackagePath>
       <Modified>2018-03-05T05:54:15.501</Modified>
+=======
+      <Modified>2018-03-05T05:28:09.362</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\x86\Debug\Core\EventDetails.exe">
+      <PackagePath>EventDetails.exe</PackagePath>
+      <Modified>2018-03-05T05:28:11.765</Modified>
+>>>>>>> 1a5276659cb5af59db1c8fdd82256157e933c49b
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

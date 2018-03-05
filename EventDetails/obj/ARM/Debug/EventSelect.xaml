@@ -10,7 +10,11 @@
 
     <StackPanel>
         <RelativePanel Background="{StaticResource SystemControlBackgroundAccentBrush}">
+<<<<<<< HEAD
             <Button x:ConnectionId='5' 
+=======
+            <Button x:ConnectionId='4' 
+>>>>>>> 1a5276659cb5af59db1c8fdd82256157e933c49b
                 x:Name="BackButton" 
                 RelativePanel.AlignLeftWithPanel="True" 
                 Content="&#xE0A6;"
@@ -18,7 +22,11 @@
                 FontFamily="Segoe MDL2 Assets"
                 Background="{StaticResource SystemControlBackgroundAltMediumBrush}"
                                          />
+<<<<<<< HEAD
             <Button x:ConnectionId='6' 
+=======
+            <Button x:ConnectionId='5' 
+>>>>>>> 1a5276659cb5af59db1c8fdd82256157e933c49b
                 x:Name="LogOutButton" 
                 RelativePanel.AlignRightWithPanel="True" 
                 Content="Log out" 
@@ -52,11 +60,14 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="0,10,0,0"/>
+<<<<<<< HEAD
             <ProgressRing x:ConnectionId='4' 
                 x:Name="Ring"
                 HorizontalAlignment="Center"
                 VerticalAlignment ="Center"
                 Margin="0,20,0,0"/>
+=======
+>>>>>>> 1a5276659cb5af59db1c8fdd82256157e933c49b
         </StackPanel>
     </StackPanel>
 </Page>

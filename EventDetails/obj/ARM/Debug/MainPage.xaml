@@ -25,7 +25,10 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+<<<<<<< HEAD
                     <RowDefinition Height="Auto" />
+=======
+>>>>>>> 1a5276659cb5af59db1c8fdd82256157e933c49b
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*" />
@@ -33,7 +36,11 @@
                     <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
                 <TextBlock 
+<<<<<<< HEAD
                     Text="Username" 
+=======
+                    Text="Email ID" 
+>>>>>>> 1a5276659cb5af59db1c8fdd82256157e933c49b
                     FontSize="20" 
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Left"
@@ -83,6 +90,7 @@
                     Foreground="{StaticResource SystemControlBackgroundAccentBrush}"
                     HorizontalAlignment="Center"
                     Margin="0,30,0,0" />
+<<<<<<< HEAD
                 <ProgressRing x:ConnectionId='5' 
                     x:Name="Ring"
                     Grid.Row="6"
@@ -90,6 +98,8 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment ="Center"
                     Margin="0,20,0,0"/>
+=======
+>>>>>>> 1a5276659cb5af59db1c8fdd82256157e933c49b
             </Grid>
         </StackPanel>
     </StackPanel>

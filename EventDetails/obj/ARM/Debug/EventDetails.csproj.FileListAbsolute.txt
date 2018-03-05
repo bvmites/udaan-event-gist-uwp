@@ -250,5 +250,8 @@ C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\ARM\Debu
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\ARM\Debug\qualifiers.txt.intermediate
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\ARM\Debug\ProjectArchitectures.txt
+<<<<<<< HEAD
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\bin\ARM\Debug\Core\ForBundle\AppxManifest.xml
 C:\Users\darsh\source\repos\event-details-registration\EventDetails\obj\ARM\Debug\EventDetails.csprojResolveAssemblyReference.cache
+=======
+>>>>>>> 1a5276659cb5af59db1c8fdd82256157e933c49b
