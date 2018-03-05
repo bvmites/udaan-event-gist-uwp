@@ -71,6 +71,7 @@ namespace EventDetails
             }
             TextBox1.Text = obj.eventName.ToString();
             TextBox2.Text = obj.tagline.ToString();
+            TextBox3.TextWrapping = TextWrapping.Wrap;
             TextBox3.Text = obj.description.ToString();
             TextBox4.Text = obj.teamSize.ToString();
             TextBox5.Text = obj.entryFee.ToString();
@@ -80,9 +81,13 @@ namespace EventDetails
 
             List<Manager> m1 = obj.managers.ToList();
 
+            TextBox6.TextWrapping = TextWrapping.Wrap;
             TextBox6.Text = m1[0].name.ToString();
+            TextBox7.TextWrapping = TextWrapping.Wrap;
             TextBox7.Text = m1[0].phone.ToString();
+            TextBox8.TextWrapping = TextWrapping.Wrap;
             TextBox8.Text = obj.rounds[0].ToString();
+            TextBox6.TextWrapping = TextWrapping.Wrap;
             m_Count = m1.Count() + 1;
             r_Count = obj.rounds.Count + 1;
 
@@ -110,6 +115,7 @@ namespace EventDetails
                 t.VerticalAlignment = VerticalAlignment.Stretch;
                 t.Margin = new Thickness(0, 10, 0, 0);
                 t.Foreground = TextBox1.Foreground;
+                t.TextWrapping = TextWrapping.Wrap;
                 Manager.Children.Add(t);
                 Rounds.UpdateLayout();
 
@@ -121,6 +127,7 @@ namespace EventDetails
                 n.VerticalAlignment = VerticalAlignment.Stretch;
                 n.Margin = new Thickness(0, 10, 0, 0);
                 n.Foreground = TextBox1.Foreground;
+                n.TextWrapping = TextWrapping.Wrap;
                 Manager.Children.Add(n);
                 Rounds.UpdateLayout();
 
@@ -142,6 +149,7 @@ namespace EventDetails
                 t.Height = 100;
                 t.Margin = new Thickness(0, 10, 0, 0);
                 t.Foreground = TextBox1.Foreground;
+                t.TextWrapping = TextWrapping.Wrap;
                 Rounds.Children.Add(t);
                 Rounds.UpdateLayout();
                 j++;
@@ -188,6 +196,7 @@ namespace EventDetails
                     t.VerticalAlignment = VerticalAlignment.Stretch;
                     t.Margin = new Thickness(0, 10, 0, 0);
                     t.Foreground = TextBox1.Foreground;
+                    t.TextWrapping = TextWrapping.Wrap;
                     Manager.Children.Add(t);
                     Rounds.UpdateLayout();
 
@@ -197,6 +206,7 @@ namespace EventDetails
                     n.HorizontalAlignment = HorizontalAlignment.Stretch;
                     n.VerticalAlignment = VerticalAlignment.Stretch;
                     n.Margin = new Thickness(0, 10, 0, 0);
+                    n.TextWrapping = TextWrapping.Wrap;
                     n.Foreground = TextBox1.Foreground;
                     Manager.Children.Add(n);
                     Rounds.UpdateLayout();
@@ -259,6 +269,7 @@ namespace EventDetails
                     t.HorizontalAlignment = HorizontalAlignment.Stretch;
                     t.VerticalAlignment = VerticalAlignment.Stretch;
                     t.Height = 100;
+                    t.TextWrapping = TextWrapping.Wrap;
                     t.Margin = new Thickness(0, 10, 0, 0);
                     t.Foreground = TextBox1.Foreground;
                     Rounds.Children.Add(t);
@@ -333,39 +344,26 @@ namespace EventDetails
                 phone.Add(TextBox7.Text.ToString());
                 round.Add(TextBox8.Text.ToString());
 
-                while (m_Count - 1 > 1)
+                int counter = 2;
+                while (counter < m_Count)
                 {
-                    m_Count--;
-                    TextBox n = (TextBox)this.Manager.FindName("ManagerName" + (m_Count));
-                    TextBox p = (TextBox)this.Manager.FindName("Number" + (m_Count));
+                    TextBox n = (TextBox)this.Manager.FindName("ManagerName" + (counter));
+                    TextBox p = (TextBox)this.Manager.FindName("Number" + (counter));
+                    counter++;
 
                     names.Add(n.Text.ToString());
                     phone.Add(p.Text.ToString());
                 }
-
-                names.Reverse();
-                phone.Reverse();
-
-                string name1 = (names[names.Count - 1]).ToString();
-                names.RemoveAt(names.Count - 1);
-                names.Insert(0, name1);
-
-                string phone1 = (phone[phone.Count - 1]).ToString();
-                phone.RemoveAt(phone.Count - 1);
-                phone.Insert(0, phone1);
-
-                while (r_Count - 1 > 1)
+                
+                counter = 2;
+                while (counter < r_Count)
                 {
-                    r_Count--;
-                    TextBox r = (TextBox)this.Rounds.FindName("Round" + (r_Count));
+                    TextBox r = (TextBox)this.Rounds.FindName("Round" + (counter));
+                    counter++;
 
                     round.Add(r.Text.ToString());
                 }
-
-                string round1 = (round[round.Count - 1]).ToString();
-                round.RemoveAt(round.Count - 1);
-                round.Insert(0, round1);
-
+                
                 d.managers = new List<Manager>();
                 int k = 0, l = 0;
 
@@ -401,7 +399,7 @@ namespace EventDetails
                     submit.IsEnabled = true;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Ring.IsActive = false;
                 Invalid.Text = "Each field is complusory..!";

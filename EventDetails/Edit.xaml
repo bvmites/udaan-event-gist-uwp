@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
         <StackPanel MinWidth="1280" Background="{ThemeResource SystemControlAcrylicWindowMediumHighBrush}">
             <RelativePanel Background="{StaticResource SystemControlBackgroundAccentBrush}">
                 <Button 
@@ -46,9 +46,9 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Margin="0,20,40,0">
                     <StackPanel Orientation="Horizontal">
@@ -111,6 +111,7 @@
                         Margin="0,10,0,0" 
                         VerticalAlignment="Stretch"
                         HorizontalAlignment="Stretch"
+                        TextWrapping="Wrap"
                         Grid.Row="3" 
                         Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                     <TextBlock 
@@ -125,6 +126,7 @@
                         x:Name="TextBox2" 
                         Margin="0,10,0,0" 
                         VerticalAlignment="Stretch" 
+                        TextWrapping="Wrap"
                         HorizontalAlignment="Stretch"
                         Grid.Row="5" 
                         Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
@@ -176,6 +178,7 @@
                             Margin="0,10,0,0" 
                             VerticalAlignment="Stretch" 
                             HorizontalAlignment="Stretch"
+                            TextWrapping="Wrap"
                             Grid.Row="1"
                             Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                         <TextBlock
@@ -192,6 +195,7 @@
                             VerticalAlignment="Stretch" 
                             HorizontalAlignment="Stretch"
                             Grid.Row="1"
+                            TextWrapping="Wrap"
                             PlaceholderText="Prize for Winner"
                             Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                         <TextBox
@@ -200,6 +204,7 @@
                             VerticalAlignment="Stretch" 
                             HorizontalAlignment="Stretch"
                             Grid.Row="1"
+                            TextWrapping="Wrap"
                             PlaceholderText="Prize for Runner Up"
                             Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
                     </StackPanel>
@@ -220,6 +225,7 @@
                         <TextBox
                             x:Name="TextBox6" 
                             Margin="0,10,0,0"
+                            TextWrapping="Wrap"
                             PlaceholderText="Name"
                             VerticalAlignment="Stretch" 
                             HorizontalAlignment="Stretch" 
@@ -228,6 +234,7 @@
                             x:Name="TextBox7" 
                             PlaceholderText="Phone Number"
                             Margin="0,10,0,0" 
+                            TextWrapping="Wrap"
                             VerticalAlignment="Stretch" 
                             HorizontalAlignment="Stretch" 
                             Foreground="{StaticResource SystemControlBackgroundAccentBrush}" />
@@ -269,6 +276,7 @@
                         <TextBox
                             x:Name="TextBox8" 
                             Margin="0,10,0,0" 
+                            TextWrapping="Wrap"
                             VerticalAlignment="Stretch" 
                             HorizontalAlignment="Stretch" 
                             Height="100"
