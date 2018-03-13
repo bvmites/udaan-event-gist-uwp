@@ -64,9 +64,14 @@ namespace EventDetails
                 Type.SelectedIndex = 3;
                 Department.IsEnabled = false;
             }
-            else
+            else if(obj.eventType == "Girls")
             {
                 Type.SelectedIndex = 4;
+                Department.IsEnabled = false;
+            }
+            else
+            {
+                Type.SelectedIndex = 5;
                 Department.IsEnabled = false;
             }
             TextBox1.Text = obj.eventName.ToString();

@@ -72,6 +72,7 @@
                                 <ComboBoxItem Content="Cultural"/>
                                 <ComboBoxItem Content="Treasure_Hunt"/>
                                 <ComboBoxItem Content="Girls"/>
+                                <ComboBoxItem Content="Adventure"/>
                             </ComboBox>
                         </StackPanel>
                         <StackPanel Margin="10,0,0,0">
