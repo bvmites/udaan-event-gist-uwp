@@ -322,7 +322,7 @@ namespace EventDetails
                 if (Department.IsEnabled == true)
                     d.department = dept;
                 else
-                    d.department = " ";
+                    d.department = "";
 
                 d.tagline = TextBox2.Text.ToString();
                 d.description = TextBox3.Text.ToString();
